@@ -2,23 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="faa2b0ef-7213-481d-862b-edd709b0edd6" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/fonts/OCRB.TTF" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/fonts/OpenSans-Bold.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/fonts/OpenSans-Light.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/fonts/OpenSans-Regular.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/fonts/OpenSans-Semibold.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/fonts/fre3of9x.ttf" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/images/LadyJustice.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/images/f119_template.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/images/generate.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/images/hybrid_promo.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/images/logo_hybrid.png" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/resources/images/logo_sud.png" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/main/java/examples/PdfGenerator.java" afterPath="$PROJECT_DIR$/src/main/java/examples/PdfGenerator.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/text.pdf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/target/classes/examples/PdfGenerator.class" afterPath="$PROJECT_DIR$/target/classes/examples/PdfGenerator.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/text.pdf" afterPath="" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -34,20 +18,27 @@
       <file leaf-file-name="PdfGenerator.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/examples/PdfGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-446">
-              <caret line="46" column="8" lean-forward="false" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
+            <state relative-caret-position="142">
+              <caret line="20" column="41" lean-forward="false" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#createAdditionInfo#0;class#PdfGenerator#0" expanded="false" />
-                <element signature="method#createPrescription#0;class#PdfGenerator#0" expanded="false" />
-                <element signature="method#createPrescriptionSender#0;class#PdfGenerator#0" expanded="false" />
-                <element signature="method#createBarcode#0;class#PdfGenerator#0" expanded="false" />
+                <element signature="method#PdfGenerator#0;class#PdfGenerator#0" expanded="false" />
+                <element signature="method#createTitle#0;class#PdfGenerator#0" expanded="false" />
+                <element signature="method#createHeader#0;class#PdfGenerator#0" expanded="false" />
+                <element signature="method#createHeaderAdditionInfo#0;class#PdfGenerator#0" expanded="false" />
+                <element signature="method#createHeaderPrescription#0;class#PdfGenerator#0" expanded="false" />
+                <element signature="method#createHeaderPrescriptionSender#0;class#PdfGenerator#0" expanded="false" />
+                <element signature="method#createHeaderBarcode#0;class#PdfGenerator#0" expanded="false" />
                 <element signature="method#createFooterKaz#0;class#PdfGenerator#0" expanded="false" />
                 <element signature="method#createFooterRus#0;class#PdfGenerator#0" expanded="false" />
                 <element signature="method#footerTablePosition#0;class#PdfGenerator#0" expanded="false" />
                 <element signature="method#headerTablePosition#0;class#PdfGenerator#0" expanded="false" />
                 <element signature="method#createDocumentNumber#0;class#PdfGenerator#0" expanded="false" />
-                <marker date="1519619308787" expanded="false" signature="8925:9301" ph="{...}" />
+                <element signature="method#createLogoImage#0;class#PdfGenerator#0" expanded="false" />
+                <element signature="method#headerInfoFont#0;class#PdfGenerator#0" expanded="false" />
+                <element signature="method#footerFont#0;class#PdfGenerator#0" expanded="false" />
+                <element signature="method#createFooterCommonInfo#0;class#PdfGenerator#0" expanded="false" />
+                <element signature="method#fontLoader#0;class#PdfGenerator#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -383,9 +374,9 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="1">
-    <option name="x" value="-96" />
-    <option name="y" value="45" />
+  <component name="ProjectFrameBounds">
+    <option name="x" value="-17" />
+    <option name="y" value="51" />
     <option name="width" value="1620" />
     <option name="height" value="808" />
   </component>
@@ -429,6 +420,21 @@
               <item name="itextTraning" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="itextTraning" type="b2602c69:ProjectViewProjectNode" />
+              <item name="itextTraning" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="examples" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="itextTraning" type="b2602c69:ProjectViewProjectNode" />
+              <item name="itextTraning" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -438,14 +444,6 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
               <item name="fonts" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="itextTraning" type="b2602c69:ProjectViewProjectNode" />
-              <item name="itextTraning" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -606,27 +604,27 @@
       <workItem from="1519278907929" duration="13602000" />
       <workItem from="1519355533033" duration="22958000" />
       <workItem from="1519613931642" duration="1729000" />
-      <workItem from="1519615723651" duration="3616000" />
+      <workItem from="1519615723651" duration="7165000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="50773000" />
+    <option name="totallyTimeSpent" value="54322000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-96" y="45" width="1620" height="808" extended-state="1" />
+    <frame x="-17" y="51" width="1620" height="808" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30222842" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.30153847" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.30461538" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.08" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -654,7 +652,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="1" />
+      <option name="time" value="3" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -665,16 +663,23 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#createAdditionInfo#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#createPrescription#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#createPrescriptionSender#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#createBarcode#0;class#PdfGenerator#0" expanded="false" />
+            <element signature="method#PdfGenerator#0;class#PdfGenerator#0" expanded="false" />
+            <element signature="method#createTitle#0;class#PdfGenerator#0" expanded="false" />
+            <element signature="method#createHeader#0;class#PdfGenerator#0" expanded="false" />
+            <element signature="method#createHeaderAdditionInfo#0;class#PdfGenerator#0" expanded="false" />
+            <element signature="method#createHeaderPrescription#0;class#PdfGenerator#0" expanded="false" />
+            <element signature="method#createHeaderPrescriptionSender#0;class#PdfGenerator#0" expanded="false" />
+            <element signature="method#createHeaderBarcode#0;class#PdfGenerator#0" expanded="false" />
             <element signature="method#createFooterKaz#0;class#PdfGenerator#0" expanded="false" />
             <element signature="method#createFooterRus#0;class#PdfGenerator#0" expanded="false" />
             <element signature="method#footerTablePosition#0;class#PdfGenerator#0" expanded="false" />
             <element signature="method#headerTablePosition#0;class#PdfGenerator#0" expanded="false" />
             <element signature="method#createDocumentNumber#0;class#PdfGenerator#0" expanded="false" />
-            <marker date="1519619308787" expanded="false" signature="8925:9301" ph="{...}" />
+            <element signature="method#createLogoImage#0;class#PdfGenerator#0" expanded="false" />
+            <element signature="method#headerInfoFont#0;class#PdfGenerator#0" expanded="false" />
+            <element signature="method#footerFont#0;class#PdfGenerator#0" expanded="false" />
+            <element signature="method#createFooterCommonInfo#0;class#PdfGenerator#0" expanded="false" />
+            <element signature="method#fontLoader#0;class#PdfGenerator#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -970,16 +975,23 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#createAdditionInfo#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#createPrescription#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#createPrescriptionSender#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#createBarcode#0;class#PdfGenerator#0" expanded="false" />
+            <element signature="method#PdfGenerator#0;class#PdfGenerator#0" expanded="false" />
+            <element signature="method#createTitle#0;class#PdfGenerator#0" expanded="false" />
+            <element signature="method#createHeader#0;class#PdfGenerator#0" expanded="false" />
+            <element signature="method#createHeaderAdditionInfo#0;class#PdfGenerator#0" expanded="false" />
+            <element signature="method#createHeaderPrescription#0;class#PdfGenerator#0" expanded="false" />
+            <element signature="method#createHeaderPrescriptionSender#0;class#PdfGenerator#0" expanded="false" />
+            <element signature="method#createHeaderBarcode#0;class#PdfGenerator#0" expanded="false" />
             <element signature="method#createFooterKaz#0;class#PdfGenerator#0" expanded="false" />
             <element signature="method#createFooterRus#0;class#PdfGenerator#0" expanded="false" />
             <element signature="method#footerTablePosition#0;class#PdfGenerator#0" expanded="false" />
             <element signature="method#headerTablePosition#0;class#PdfGenerator#0" expanded="false" />
             <element signature="method#createDocumentNumber#0;class#PdfGenerator#0" expanded="false" />
-            <marker date="1519619308787" expanded="false" signature="8925:9301" ph="{...}" />
+            <element signature="method#createLogoImage#0;class#PdfGenerator#0" expanded="false" />
+            <element signature="method#headerInfoFont#0;class#PdfGenerator#0" expanded="false" />
+            <element signature="method#footerFont#0;class#PdfGenerator#0" expanded="false" />
+            <element signature="method#createFooterCommonInfo#0;class#PdfGenerator#0" expanded="false" />
+            <element signature="method#fontLoader#0;class#PdfGenerator#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1307,16 +1319,23 @@
           <caret line="49" column="0" lean-forward="true" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#createAdditionInfo#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#createPrescription#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#createPrescriptionSender#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#createBarcode#0;class#PdfGenerator#0" expanded="false" />
+            <element signature="method#PdfGenerator#0;class#PdfGenerator#0" expanded="false" />
+            <element signature="method#createTitle#0;class#PdfGenerator#0" expanded="false" />
+            <element signature="method#createHeader#0;class#PdfGenerator#0" expanded="false" />
+            <element signature="method#createHeaderAdditionInfo#0;class#PdfGenerator#0" expanded="false" />
+            <element signature="method#createHeaderPrescription#0;class#PdfGenerator#0" expanded="false" />
+            <element signature="method#createHeaderPrescriptionSender#0;class#PdfGenerator#0" expanded="false" />
+            <element signature="method#createHeaderBarcode#0;class#PdfGenerator#0" expanded="false" />
             <element signature="method#createFooterKaz#0;class#PdfGenerator#0" expanded="false" />
             <element signature="method#createFooterRus#0;class#PdfGenerator#0" expanded="false" />
             <element signature="method#footerTablePosition#0;class#PdfGenerator#0" expanded="false" />
             <element signature="method#headerTablePosition#0;class#PdfGenerator#0" expanded="false" />
             <element signature="method#createDocumentNumber#0;class#PdfGenerator#0" expanded="false" />
-            <marker date="1519619308787" expanded="false" signature="8925:9301" ph="{...}" />
+            <element signature="method#createLogoImage#0;class#PdfGenerator#0" expanded="false" />
+            <element signature="method#headerInfoFont#0;class#PdfGenerator#0" expanded="false" />
+            <element signature="method#footerFont#0;class#PdfGenerator#0" expanded="false" />
+            <element signature="method#createFooterCommonInfo#0;class#PdfGenerator#0" expanded="false" />
+            <element signature="method#fontLoader#0;class#PdfGenerator#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1352,16 +1371,23 @@
           <caret line="32" column="16" lean-forward="false" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#createAdditionInfo#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#createPrescription#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#createPrescriptionSender#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#createBarcode#0;class#PdfGenerator#0" expanded="false" />
+            <element signature="method#PdfGenerator#0;class#PdfGenerator#0" expanded="false" />
+            <element signature="method#createTitle#0;class#PdfGenerator#0" expanded="false" />
+            <element signature="method#createHeader#0;class#PdfGenerator#0" expanded="false" />
+            <element signature="method#createHeaderAdditionInfo#0;class#PdfGenerator#0" expanded="false" />
+            <element signature="method#createHeaderPrescription#0;class#PdfGenerator#0" expanded="false" />
+            <element signature="method#createHeaderPrescriptionSender#0;class#PdfGenerator#0" expanded="false" />
+            <element signature="method#createHeaderBarcode#0;class#PdfGenerator#0" expanded="false" />
             <element signature="method#createFooterKaz#0;class#PdfGenerator#0" expanded="false" />
             <element signature="method#createFooterRus#0;class#PdfGenerator#0" expanded="false" />
             <element signature="method#footerTablePosition#0;class#PdfGenerator#0" expanded="false" />
             <element signature="method#headerTablePosition#0;class#PdfGenerator#0" expanded="false" />
             <element signature="method#createDocumentNumber#0;class#PdfGenerator#0" expanded="false" />
-            <marker date="1519619308787" expanded="false" signature="8925:9301" ph="{...}" />
+            <element signature="method#createLogoImage#0;class#PdfGenerator#0" expanded="false" />
+            <element signature="method#headerInfoFont#0;class#PdfGenerator#0" expanded="false" />
+            <element signature="method#footerFont#0;class#PdfGenerator#0" expanded="false" />
+            <element signature="method#createFooterCommonInfo#0;class#PdfGenerator#0" expanded="false" />
+            <element signature="method#fontLoader#0;class#PdfGenerator#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1726,20 +1752,27 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/examples/PdfGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-446">
-          <caret line="46" column="8" lean-forward="false" selection-start-line="46" selection-start-column="8" selection-end-line="46" selection-end-column="8" />
+        <state relative-caret-position="142">
+          <caret line="20" column="41" lean-forward="false" selection-start-line="20" selection-start-column="41" selection-end-line="20" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#createAdditionInfo#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#createPrescription#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#createPrescriptionSender#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#createBarcode#0;class#PdfGenerator#0" expanded="false" />
+            <element signature="method#PdfGenerator#0;class#PdfGenerator#0" expanded="false" />
+            <element signature="method#createTitle#0;class#PdfGenerator#0" expanded="false" />
+            <element signature="method#createHeader#0;class#PdfGenerator#0" expanded="false" />
+            <element signature="method#createHeaderAdditionInfo#0;class#PdfGenerator#0" expanded="false" />
+            <element signature="method#createHeaderPrescription#0;class#PdfGenerator#0" expanded="false" />
+            <element signature="method#createHeaderPrescriptionSender#0;class#PdfGenerator#0" expanded="false" />
+            <element signature="method#createHeaderBarcode#0;class#PdfGenerator#0" expanded="false" />
             <element signature="method#createFooterKaz#0;class#PdfGenerator#0" expanded="false" />
             <element signature="method#createFooterRus#0;class#PdfGenerator#0" expanded="false" />
             <element signature="method#footerTablePosition#0;class#PdfGenerator#0" expanded="false" />
             <element signature="method#headerTablePosition#0;class#PdfGenerator#0" expanded="false" />
             <element signature="method#createDocumentNumber#0;class#PdfGenerator#0" expanded="false" />
-            <marker date="1519619308787" expanded="false" signature="8925:9301" ph="{...}" />
+            <element signature="method#createLogoImage#0;class#PdfGenerator#0" expanded="false" />
+            <element signature="method#headerInfoFont#0;class#PdfGenerator#0" expanded="false" />
+            <element signature="method#footerFont#0;class#PdfGenerator#0" expanded="false" />
+            <element signature="method#createFooterCommonInfo#0;class#PdfGenerator#0" expanded="false" />
+            <element signature="method#fontLoader#0;class#PdfGenerator#0" expanded="false" />
           </folding>
         </state>
       </provider>
