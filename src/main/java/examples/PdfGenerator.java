@@ -7,14 +7,15 @@ import com.itextpdf.text.pdf.*;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.time.LocalDate;
+import java.time.LocalTime;
+import java.time.format.DateTimeFormatter;
 
 public class PdfGenerator {
+
     private static String FILE = "d:/test/FirstPdf.pdf";
 
-
     public PdfGenerator() {
-
-        System.out.println(this.getClass().getClassLoader().getResource("images/logo_hybrid.png"));
         createTitle(FILE);
     }
 
@@ -24,10 +25,12 @@ public class PdfGenerator {
             PdfWriter writer = PdfWriter.getInstance(document, new FileOutputStream(dest));
 
             document.open();
-            createDocumentNumber(writer, "01020304", 520, 810);
+            createDocumentNumber(writer, "01639174");
             createHeader(writer);
-            createFooterKaz(writer);
-            createFooterRus(writer);
+            String data = getDate();
+            String time = getTime();
+            createFooterKaz(writer, "Astana", data, time);
+            createFooterRus(writer, "Astana", data, time);
             document.close();
 
         } catch (DocumentException e) {
@@ -37,67 +40,120 @@ public class PdfGenerator {
         }
     }
 
+    private String getDate() {
+        LocalDate localDate = LocalDate.now();
+        DateTimeFormatter dataFormat = DateTimeFormatter.ofPattern("d-MM-YYYY");
+        String data = dataFormat.format(localDate);
+        return data;
+    }
+
+    private String getTime() {
+        LocalTime localTime = LocalTime.now();
+        DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH:mm");
+        String time = timeFormatter.format(localTime);
+        return time;
+    }
+
     private void createHeader(PdfWriter writer) {
+
+
         PdfPTable table = new PdfPTable(1);
-        table.setTotalWidth(170);
+        table.setTotalWidth(230);
         table.getDefaultCell().setBorder(0);
 
         Image logoImage = createLogoImage();
         Phrase prescription = createHeaderPrescription("ПРЕДПИСАНИЕ/Заказное письмо с уведомлением");
-        Phrase prescriptionSender = createHeaderPrescriptionSender("от: УАП ДВД г.Астана, улица 20-40, д. 4/1");
-        Phrase barcode = createHeaderBarcode("DA010080119KZ");
-        Phrase recipient = createHeaderAdditionInfo("КӘДЕН ТАҢАТАР БЕКСҰЛТАНҰЛЫ");
-        Phrase location = createHeaderAdditionInfo("ул. КОРГАЛЖЫН, д. 11, корпус -, кв. 13");
-        Phrase region = createHeaderAdditionInfo("ЕСИЛЬСКИЙ РАЙОН");
-        Phrase cityAndIndex = createHeaderAdditionInfo("АСТАНА, 010000");
-        Phrase shpi = createHeaderAdditionInfo("ШПИ");
-        Phrase barcodeInText = createHeaderAdditionInfo("DA010080119KZ");
+        PdfPCell prescriptionCell = getPdfPCell(prescription, 0);
+        prescriptionCell.setPaddingTop(1);
+        prescriptionCell.setPaddingBottom(0);
 
-        table.addCell(logoImage);
-        table.addCell(prescription);
-        table.addCell(prescriptionSender);
-        table.addCell(recipient);
-        table.addCell(location);
-        table.addCell(region);
-        table.addCell(cityAndIndex);
-        table.addCell(barcode);
-        table.addCell(shpi);
-        table.addCell(barcodeInText);
+        Phrase prescriptionSender = createHeaderPrescriptionSender("от: УАП ДВД г.Астана, улица 20-40, д. 4/1");
+        PdfPCell prescriptionSenderCell = new PdfPCell(prescriptionSender);
+        prescriptionSenderCell.setBottom(1);
+        prescriptionSenderCell.setPaddingTop(0);
+        prescriptionSenderCell.setPaddingLeft(0);
+        prescriptionSenderCell.setBorder(0);
+
+
+        Phrase recipient = createHeaderAdditionInfo("КӘДЕН ТАҢАТАР БЕКСҰЛТАНҰЛЫ");
+        PdfPCell recipientCell = getPdfPCell(recipient, 0);
+        recipientCell.setPaddingTop(1);
+
+        Phrase location = createHeaderAdditionInfo("ул. КОРГАЛЖЫН, д. 11, корпус -, кв. 13");
+        PdfPCell locationCell = getPdfPCell(location, 0);
+
+
+        Phrase region = createHeaderAdditionInfo("ЕСИЛЬСКИЙ РАЙОН");
+        PdfPCell regionCell = getPdfPCell(region, 0);
+
+        Phrase cityAndIndex = createHeaderAdditionInfo("АСТАНА, 010000");
+        PdfPCell cityAndIndexCell = getPdfPCell(cityAndIndex, 0);
+
+        Phrase barcode = createHeaderBarcode("DA010080119KZ");
+        PdfPCell headerBarcodeCell = getPdfPCell(barcode, 0);
+        headerBarcodeCell.setPaddingBottom(0);
+
+
+        Phrase shpi = new Phrase("ШПИ", openSansRegular(4));
+        PdfPCell shpiCell = getPdfPCell(shpi, 0);
+        shpiCell.setPaddingBottom(0);
+        shpiCell.setPaddingTop(1);
+
+        Phrase barcodeInText = new Phrase("DA010080119KZ", helvetica(7));
+        PdfPCell barcodeInTextCell = getPdfPCell(barcodeInText, 0);
+        barcodeInTextCell.setPaddingBottom(0);
+        barcodeInTextCell.setPaddingLeft(45);
+
+        try {
+            writer.getDirectContent().addImage(logoImage);
+        } catch (DocumentException e) {
+            e.printStackTrace();
+        }
+
+        table.addCell(prescriptionCell);
+        table.addCell(prescriptionSenderCell);
+        table.addCell(recipientCell);
+        table.addCell(locationCell);
+        table.addCell(regionCell);
+        table.addCell(cityAndIndexCell);
+        table.addCell(headerBarcodeCell);
+        table.addCell(shpiCell);
+        table.addCell(barcodeInTextCell);
 
         headerTablePosition(writer, table);
 
     }
 
+    private PdfPCell getPdfPCell(Phrase phrase, int border) {
+        PdfPCell pdfPCell = new PdfPCell(phrase);
+        pdfPCell.setPadding(border);
+        pdfPCell.setBorder(0);
+        return pdfPCell;
+    }
+
     private Phrase createHeaderAdditionInfo(String info) {
-        Phrase phrase = new Phrase(info, headerInfoFont());
+        Phrase phrase = new Phrase(info, openSansRegular(11));
         return phrase;
     }
 
+
     private Phrase createHeaderPrescription(String prescription) {
-        Phrase phrase = new Phrase(prescription, headerInfoFont());
+        Phrase phrase = new Phrase(prescription, openSansRegular(7));
         return phrase;
     }
 
     private Phrase createHeaderPrescriptionSender(String sender) {
-        Phrase phrase = new Phrase("от: " + sender,  headerInfoFont());
+        Phrase phrase = new Phrase(sender, openSansRegular(7));
         return phrase;
     }
 
     private Phrase createHeaderBarcode(String barcode) {
-        BaseFont bfSPI = null;
-        try {
-            bfSPI = BaseFont.createFont(this.getClass().getClassLoader().getResource("fonts/fre3of9x.ttf").toString(), BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
-        } catch (DocumentException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        Font fontSPI = new Font(bfSPI, 20);
-        Phrase phrase2 = new Phrase("*" + barcode + "*", fontSPI);
+
+        Phrase phrase2 = new Phrase("*" + barcode + "*", fre3of9x(24.5f));
         return phrase2;
     }
 
-    private void createFooterKaz(PdfWriter writer) {
+    private void createFooterKaz(PdfWriter writer, String f6, String date, String hourAndMinute) {
         PdfPTable table = new PdfPTable(1);
         table.setTotalWidth(490);
 
@@ -107,12 +163,12 @@ public class PdfGenerator {
         cell1.setBorder(0);
         cell1.setPadding(0);
 
-        Phrase documentCreator = createFooterCommonInfo("Электрондық құжатты жасаған: УАП ДВД г.Астана");
+        Phrase documentCreator = createFooterCommonInfo("Электрондық құжатты жасаған: " + f6);
         PdfPCell cell2 = new PdfPCell(documentCreator);
         cell2.setBorder(0);
         cell2.setPadding(0);
 
-        Phrase dateAndTime = createFooterCommonInfo("Хатты өңдеу күні мен уақыты: 19-02-2018 сағат 09:00");
+        Phrase dateAndTime = createFooterCommonInfo("Хатты өңдеу күні мен уақыты: " + date + " сағат " + hourAndMinute);
         PdfPCell cell3 = new PdfPCell(dateAndTime);
         cell3.setBorder(0);
         cell3.setPadding(0);
@@ -120,11 +176,11 @@ public class PdfGenerator {
         table.addCell(cell2);
         table.addCell(cell3);
 
-        footerTablePosition(writer, table, 50, 170);
+        footerTablePosition(writer, table, 57, 160);
 
     }
 
-    private void createFooterRus(PdfWriter writer) {
+    private void createFooterRus(PdfWriter writer, String f6, String date, String hourAndMinute) {
         PdfPTable table = new PdfPTable(1);
         table.setTotalWidth(490);
         Phrase commonInfo = createFooterCommonInfo("Настоящий текст (письмо, документ) получен и распечатан с использованием портала WWW.POST.KZ и/или" +
@@ -133,12 +189,12 @@ public class PdfGenerator {
         cell1.setBorder(0);
         cell1.setPadding(0);
 
-        Phrase documentCreator = createFooterCommonInfo("Электронный документ создал: УАП ДВД г.Астана");
+        Phrase documentCreator = createFooterCommonInfo("Электронный документ создал: " + f6);
         PdfPCell cell2 = new PdfPCell(documentCreator);
         cell2.setBorder(0);
         cell2.setPadding(0);
 
-        Phrase dateAndTime = createFooterCommonInfo("Дата и время обработки письма: 23-02-2018 в 09:00 часов");
+        Phrase dateAndTime = createFooterCommonInfo("Дата и время обработки письма: " + date + " в " + hourAndMinute + " часов");
         PdfPCell cell3 = new PdfPCell(dateAndTime);
         cell3.setBorder(0);
         cell3.setPadding(0);
@@ -146,7 +202,7 @@ public class PdfGenerator {
         table.addCell(cell2);
         table.addCell(cell3);
 
-        footerTablePosition(writer, table, 50, 120);
+        footerTablePosition(writer, table, 57, 110);
 
     }
 
@@ -161,35 +217,31 @@ public class PdfGenerator {
         final int FIRST_ROW = 0;
         final int LAST_ROW = -1;
         PdfContentByte contentByte = writer.getDirectContent();
-        table.writeSelectedRows(FIRST_ROW, LAST_ROW, 380, 760, contentByte);
+        table.writeSelectedRows(FIRST_ROW, LAST_ROW, 330, 738f, contentByte);
     }
 
-    private void createDocumentNumber(PdfWriter writer, String text, int x, int y) {
+    private void createDocumentNumber(PdfWriter writer, String text) {
+        Phrase phrase = new Phrase(text);
+        phrase.setFont(ocrb());
+
         PdfContentByte cb = writer.getDirectContent();
-        BaseFont bf = null;
-        try {
-            bf = BaseFont.createFont(BaseFont.HELVETICA, BaseFont.CP1252, BaseFont.NOT_EMBEDDED);
-            cb.saveState();
-            cb.beginText();
-            cb.moveText(x, y);
-            cb.setFontAndSize(bf, 12);
-            cb.showText(text);
-            cb.endText();
-            cb.restoreState();
-        } catch (DocumentException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        PdfPTable table = new PdfPTable(1);
+        table.setTotalWidth(65);
+        PdfPCell cell1 = new PdfPCell(phrase);
+        cell1.setPadding(0);
+        cell1.setBorder(0);
+        table.addCell(cell1);
+        final int FIRST_ROW = 0;
+        final int LAST_ROW = -1;
+        table.writeSelectedRows(FIRST_ROW, LAST_ROW, 519, 813, cb);
     }
 
     private Image createLogoImage() {
         Image image = null;
         try {
             image = Image.getInstance(this.getClass().getClassLoader().getResource("images/logo_hybrid.png"));
-            image.scaleToFit(90, 80);
-
-
+            image.setAbsolutePosition(329f, 740f);
+            image.scaleAbsolute(80f, 23f);
         } catch (BadElementException e) {
             e.printStackTrace();
         } catch (IOException e) {
@@ -199,20 +251,57 @@ public class PdfGenerator {
         return image;
     }
 
-    private Font headerInfoFont(){
-        Font font = fontLoader(this.getClass().getClassLoader().getResource("fonts/OpenSans-Bold.ttf").toString());
-        font.setSize(10);
-        return font;
-    }
 
-    private Font footerFont(){
+    private Font footerFont() {
         Font font = fontLoader(this.getClass().getClassLoader().getResource("fonts/OpenSans-Bold.ttf").toString());
         font.setSize(8);
         return font;
     }
 
+    private Font ocrb() {
+        Font font = fontLoader(this.getClass().getClassLoader().getResource("fonts/OCRB.TTF").toString());
+        font.setSize(11);
+        return font;
+    }
+
+    private Font openSansLight(int size) {
+        Font font = fontLoader(this.getClass().getClassLoader().getResource("fonts/OpenSans-Light.ttf").toString());
+        font.setSize(size);
+        return font;
+    }
+
+    private Font openSansBold(int size) {
+        Font font = fontLoader(this.getClass().getClassLoader().getResource("fonts/OpenSans-Bold.ttf").toString());
+        font.setSize(size);
+        return font;
+    }
+
+    private Font openSansSemiBold(int size) {
+        Font font = fontLoader(this.getClass().getClassLoader().getResource("fonts/OpenSans-Semibold.ttf").toString());
+        font.setSize(size);
+        return font;
+    }
+
+    private Font openSansRegular(int size) {
+        Font font = fontLoader(this.getClass().getClassLoader().getResource("fonts/OpenSans-Regular.ttf").toString());
+        font.setSize(size);
+        return font;
+    }
+
+    private Font helvetica(int size) {
+        Font font = new Font(Font.FontFamily.HELVETICA);
+        font.setSize(size);
+        return font;
+    }
+
+    private Font fre3of9x(float size) {
+        Font font = fontLoader(this.getClass().getClassLoader().getResource("fonts/fre3of9x.ttf").toString());
+        font.setSize(size);
+        return font;
+    }
+
     private Phrase createFooterCommonInfo(String info) {
-        Phrase phrase = new Phrase(info, footerFont());
+        Phrase phrase = new Phrase(info, openSansRegular(8));
         return phrase;
     }
 
