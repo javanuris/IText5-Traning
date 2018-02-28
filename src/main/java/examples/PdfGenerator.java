@@ -1,11 +1,10 @@
 package examples;
 
+import titles.TitleConstructor;
 import utils.DateUtil;
 import utils.FontUtil;
 import com.itextpdf.text.*;
 import com.itextpdf.text.pdf.*;
-import utils.ImageUtil;
-
 
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
@@ -13,6 +12,17 @@ import java.io.FileOutputStream;
 public class PdfGenerator {
 
     private static String FILE = "d:/test/FirstPdf.pdf";
+
+    public static final float HEADER_X = 330f;
+    public static final float HEADER_Y = 738f;
+
+    public static final float KAZ_FOOTER_X = 57f;
+    public static final float KAZ_FOOTER_Y = 160f;
+
+    public static final float RUS_FOOTER_X = 57f;
+    public static final float RUS_FOOTER_Y = 110f;
+
+    private TitleConstructor construct = new TitleConstructor();
 
     public PdfGenerator() {
         createTitle(FILE);
@@ -24,16 +34,10 @@ public class PdfGenerator {
             PdfWriter writer = PdfWriter.getInstance(document, new FileOutputStream(dest));
             document.open();
 
-            createIdPackage(writer, "01639174");
             createHeader(writer);
-
-            String data = DateUtil.getDate();
-            String time = DateUtil.getTime();
-
-            createFooter(writer, "Astana", data, time);
+            createFooter(writer, "Astana");
 
             document.close();
-
         } catch (DocumentException e) {
             e.printStackTrace();
         } catch (FileNotFoundException e) {
@@ -41,66 +45,49 @@ public class PdfGenerator {
         }
     }
 
-    private void createFooter(PdfWriter writer, String f6, String date, String time) {
-        createFooterKaz(writer, f6, date, time);
-        createFooterRus(writer, f6, date, time);
-    }
-
     private void createHeader(PdfWriter writer) {
 
+        construct.createIdPackage(writer, "01639174");
 
-        PdfPTable table = new PdfPTable(1);
-        table.setTotalWidth(230);
-        table.getDefaultCell().setBorder(0);
-
-        Image logoImage = createLogoImage();
-        Phrase prescription = createHeaderPrescription("ПРЕДПИСАНИЕ/Заказное письмо с уведомлением");
-        PdfPCell prescriptionCell = getPdfPCell(prescription, 0);
-        prescriptionCell.setPaddingTop(1);
-        prescriptionCell.setPaddingBottom(0);
-
-        Phrase prescriptionSender = createHeaderPrescriptionSender("от: УАП ДВД г.Астана, улица 20-40, д. 4/1");
-        PdfPCell prescriptionSenderCell = new PdfPCell(prescriptionSender);
-        prescriptionSenderCell.setBottom(1);
-        prescriptionSenderCell.setPaddingTop(0);
-        prescriptionSenderCell.setPaddingLeft(0);
-        prescriptionSenderCell.setBorder(0);
-
-
-        Phrase recipient = createHeaderAdditionInfo("КӘДЕН ТАҢАТАР БЕКСҰЛТАНҰЛЫ");
-        PdfPCell recipientCell = getPdfPCell(recipient, 0);
-        recipientCell.setPaddingTop(1);
-
-        Phrase location = createHeaderAdditionInfo("ул. КОРГАЛЖЫН, д. 11, корпус -, кв. 13");
-        PdfPCell locationCell = getPdfPCell(location, 0);
-
-
-        Phrase region = createHeaderAdditionInfo("ЕСИЛЬСКИЙ РАЙОН");
-        PdfPCell regionCell = getPdfPCell(region, 0);
-
-        Phrase cityAndIndex = createHeaderAdditionInfo("АСТАНА, 010000");
-        PdfPCell cityAndIndexCell = getPdfPCell(cityAndIndex, 0);
-
-        Phrase barcode = createHeaderBarcode("DA010080119KZ");
-        PdfPCell headerBarcodeCell = getPdfPCell(barcode, 0);
-        headerBarcodeCell.setPaddingBottom(0);
-
-
-        Phrase shpi = new Phrase("ШПИ", FontUtil.openSansRegular(4));
-        PdfPCell shpiCell = getPdfPCell(shpi, 0);
-        shpiCell.setPaddingBottom(0);
-        shpiCell.setPaddingTop(1);
-
-        Phrase barcodeInText = new Phrase("DA010080119KZ", FontUtil.helvetica(7));
-        PdfPCell barcodeInTextCell = getPdfPCell(barcodeInText, 0);
-        barcodeInTextCell.setPaddingBottom(0);
-        barcodeInTextCell.setPaddingLeft(45);
+        PdfPTable table = construct.createTable();
+        Image logoImage = construct.createLogoImage();
 
         try {
             writer.getDirectContent().addImage(logoImage);
         } catch (DocumentException e) {
             e.printStackTrace();
         }
+
+        Phrase prescription = new Phrase("ПРЕДПИСАНИЕ/Заказное письмо с уведомлением", FontUtil.openSansRegular(7));
+        PdfPCell prescriptionCell = construct.getPdfPCell(prescription);
+        prescriptionCell.setPaddingTop(1);
+
+        Phrase prescriptionSender = new Phrase("от: УАП ДВД г.Астана, улица 20-40, д. 4/1", FontUtil.openSansRegular(7));
+        PdfPCell prescriptionSenderCell = construct.getPdfPCell(prescriptionSender);
+
+        Phrase recipient = new Phrase("КӘДЕН ТАҢАТАР БЕКСҰЛТАНҰЛЫ", FontUtil.openSansRegular(11));
+        PdfPCell recipientCell = construct.getPdfPCell(recipient);
+        recipientCell.setPaddingTop(1);
+
+        Phrase location = new Phrase("ул. КОРГАЛЖЫН, д. 11, корпус -, кв. 13", FontUtil.openSansRegular(11));
+        PdfPCell locationCell = construct.getPdfPCell(location);
+
+        Phrase region = new Phrase("ЕСИЛЬСКИЙ РАЙОН", FontUtil.openSansRegular(11));
+        PdfPCell regionCell = construct.getPdfPCell(region);
+
+        Phrase cityAndIndex = new Phrase("АСТАНА, 010000", FontUtil.openSansRegular(11));
+        PdfPCell cityAndIndexCell = construct.getPdfPCell(cityAndIndex);
+
+        Phrase barcodeInCode = construct.createBarcodeInCode("DA010080119KZ");
+        PdfPCell headerBarcodeCell = construct.getPdfPCell(barcodeInCode);
+
+        Phrase shpi = construct.createShpi();
+        PdfPCell shpiCell = construct.getPdfPCell(shpi);
+        shpiCell.setPaddingTop(1);
+
+        Phrase barcodeInText = construct.createBarcodeInText("DA010080119KZ");
+        PdfPCell barcodeInTextCell = construct.getPdfPCell(barcodeInText);
+        barcodeInTextCell.setPaddingLeft(45);
 
         table.addCell(prescriptionCell);
         table.addCell(prescriptionSenderCell);
@@ -109,135 +96,63 @@ public class PdfGenerator {
         table.addCell(regionCell);
         table.addCell(cityAndIndexCell);
         table.addCell(headerBarcodeCell);
-        table.addCell(shpiCell);
+        table.addCell(shpi);
         table.addCell(barcodeInTextCell);
 
-        headerTablePosition(writer, table);
+        construct.tablePosition(writer, table, HEADER_X, HEADER_Y);
 
     }
 
-    private PdfPCell getPdfPCell(Phrase phrase, int border) {
-        PdfPCell pdfPCell = new PdfPCell(phrase);
-        pdfPCell.setPadding(border);
-        pdfPCell.setBorder(0);
-        return pdfPCell;
-    }
-
-    private Phrase createHeaderAdditionInfo(String info) {
-        Phrase phrase = new Phrase(info, FontUtil.openSansRegular(11));
-        return phrase;
-    }
-
-    private Phrase createHeaderPrescription(String prescription) {
-        Phrase phrase = new Phrase(prescription, FontUtil.openSansRegular(7));
-        return phrase;
-    }
-
-    private Phrase createHeaderPrescriptionSender(String sender) {
-        Phrase phrase = new Phrase(sender, FontUtil.openSansRegular(7));
-        return phrase;
-    }
-
-    private Phrase createHeaderBarcode(String barcode) {
-        Phrase phrase2 = new Phrase("*" + barcode + "*", FontUtil.fre3of9x(24.5f));
-        return phrase2;
+    private void createFooter(PdfWriter writer, String f6) {
+        String date = DateUtil.getDate();
+        String time = DateUtil.getTime();
+        createFooterKaz(writer, f6, date, time);
+        createFooterRus(writer, f6, date, time);
     }
 
     private void createFooterKaz(PdfWriter writer, String f6, String date, String hourAndMinute) {
+
         PdfPTable table = new PdfPTable(1);
         table.setTotalWidth(490);
 
-        Phrase commonInfo = createFooterCommonInfo("Осы мәтін (хат, құжат) «Қазпошта» АҚ-ның WWW.POST.KZ порталы және/немесе «ГЭП» ақпараттық жүйесі арқылы алынған\n" +
-                "және басып шығарылған және жіберушінің электрондық құжаттының қағаз көшірмесі болып табылады.");
-        PdfPCell cell1 = new PdfPCell(commonInfo);
-        cell1.setBorder(0);
-        cell1.setPadding(0);
+        Phrase commonInfo = new Phrase("Осы мәтін (хат, құжат) «Қазпошта» АҚ-ның WWW.POST.KZ порталы және/немесе «ГЭП» ақпараттық жүйесі арқылы алынған" +
+                "және басып шығарылған және жіберушінің электрондық құжаттының қағаз көшірмесі болып табылады.", FontUtil.openSansRegular(8));
+        PdfPCell cell1 = construct.getPdfPCell(commonInfo);
 
-        Phrase documentCreator = createFooterCommonInfo("Электрондық құжатты жасаған: " + f6);
-        PdfPCell cell2 = new PdfPCell(documentCreator);
-        cell2.setBorder(0);
-        cell2.setPadding(0);
+        Phrase documentCreator = new Phrase("Электрондық құжатты жасаған: " + f6, FontUtil.openSansRegular(8));
+        PdfPCell cell2 = construct.getPdfPCell(documentCreator);
 
-        Phrase dateAndTime = createFooterCommonInfo("Хатты өңдеу күні мен уақыты: " + date + " сағат " + hourAndMinute);
-        PdfPCell cell3 = new PdfPCell(dateAndTime);
-        cell3.setBorder(0);
-        cell3.setPadding(0);
+        Phrase dateAndTime = new Phrase("Хатты өңдеу күні мен уақыты: " + date + " сағат " + hourAndMinute, FontUtil.openSansRegular(8));
+        PdfPCell cell3 = construct.getPdfPCell(dateAndTime);
+
         table.addCell(cell1);
         table.addCell(cell2);
         table.addCell(cell3);
-
-        footerTablePosition(writer, table, 57, 160);
+        construct.tablePosition(writer, table, KAZ_FOOTER_X, KAZ_FOOTER_Y);
 
     }
 
     private void createFooterRus(PdfWriter writer, String f6, String date, String hourAndMinute) {
+
         PdfPTable table = new PdfPTable(1);
         table.setTotalWidth(490);
-        Phrase commonInfo = createFooterCommonInfo("Настоящий текст (письмо, документ) получен и распечатан с использованием портала WWW.POST.KZ и/или" +
-                "информационной системой «ГЭП» АО «Казпочта» и является бумажной копией электронного документа отправителя.");
-        PdfPCell cell1 = new PdfPCell(commonInfo);
-        cell1.setBorder(0);
-        cell1.setPadding(0);
+        Phrase commonInfo = new Phrase("Настоящий текст (письмо, документ) получен и распечатан с использованием портала WWW.POST.KZ и/или " +
+                "информационной системой «ГЭП» АО «Казпочта» и является бумажной копией электронного документа отправителя.", FontUtil.openSansRegular(8));
+        PdfPCell cell1 = construct.getPdfPCell(commonInfo);
 
-        Phrase documentCreator = createFooterCommonInfo("Электронный документ создал: " + f6);
-        PdfPCell cell2 = new PdfPCell(documentCreator);
-        cell2.setBorder(0);
-        cell2.setPadding(0);
 
-        Phrase dateAndTime = createFooterCommonInfo("Дата и время обработки письма: " + date + " в " + hourAndMinute + " часов");
-        PdfPCell cell3 = new PdfPCell(dateAndTime);
-        cell3.setBorder(0);
-        cell3.setPadding(0);
+        Phrase documentCreator = new Phrase("Электронный документ создал: " + f6, FontUtil.openSansRegular(8));
+        PdfPCell cell2 = construct.getPdfPCell(documentCreator);
+
+
+        Phrase dateAndTime = new Phrase("Дата и время обработки письма: " + date + " в " + hourAndMinute + " часов", FontUtil.openSansRegular(8));
+        PdfPCell cell3 = construct.getPdfPCell(dateAndTime);
+
         table.addCell(cell1);
         table.addCell(cell2);
         table.addCell(cell3);
 
-        footerTablePosition(writer, table, 57, 110);
-
-    }
-
-    private void footerTablePosition(PdfWriter writer, PdfPTable table, int xPos, int yPos) {
-        final int FIRST_ROW = 0;
-        final int LAST_ROW = -1;
-        PdfContentByte contentByte = writer.getDirectContent();
-        table.writeSelectedRows(FIRST_ROW, LAST_ROW, xPos, yPos, contentByte);
-    }
-
-    private void headerTablePosition(PdfWriter writer, PdfPTable table) {
-        final int FIRST_ROW = 0;
-        final int LAST_ROW = -1;
-        PdfContentByte contentByte = writer.getDirectContent();
-        table.writeSelectedRows(FIRST_ROW, LAST_ROW, 330, 738f, contentByte);
-    }
-
-    private void createIdPackage(PdfWriter writer, String text) {
-        Phrase phrase = new Phrase(text);
-        phrase.setFont(FontUtil.ocrb(11));
-
-        PdfContentByte cb = writer.getDirectContent();
-        PdfPTable table = new PdfPTable(1);
-        table.setTotalWidth(65);
-        PdfPCell cell1 = new PdfPCell(phrase);
-        cell1.setPadding(0);
-        cell1.setBorder(0);
-        table.addCell(cell1);
-        final int FIRST_ROW = 0;
-        final int LAST_ROW = -1;
-        table.writeSelectedRows(FIRST_ROW, LAST_ROW, 519, 813, cb);
-    }
-
-    private Image createLogoImage() {
-        Image image = ImageUtil.getLogoHybrid();
-        Image image1 = ImageUtil.getLogoHybrid();
-        System.out.println(image+ "   ***   "+image1);
-        image.setAbsolutePosition(329f, 740f);
-        image.scaleAbsolute(80f, 23f);
-        return image;
-    }
-
-    private Phrase createFooterCommonInfo(String info) {
-        Phrase phrase = new Phrase(info, FontUtil.openSansRegular(8));
-        return phrase;
+        construct.tablePosition(writer, table, RUS_FOOTER_X, RUS_FOOTER_Y);
     }
 
 

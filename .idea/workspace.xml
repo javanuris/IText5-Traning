@@ -2,13 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="faa2b0ef-7213-481d-862b-edd709b0edd6" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" afterPath="$PROJECT_DIR$/src/main/java/Main.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/examples/PdfGenerator.java" afterPath="$PROJECT_DIR$/src/main/java/examples/PdfGenerator.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/FileDownloader.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/utils/FontUtil.java" afterPath="$PROJECT_DIR$/src/main/java/utils/FontUtil.java" />
-      <change beforePath="$PROJECT_DIR$/target/classes/examples/PdfGenerator.class" afterPath="$PROJECT_DIR$/target/classes/examples/PdfGenerator.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/utils/FontUtil.class" afterPath="$PROJECT_DIR$/target/classes/utils/FontUtil.class" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -24,37 +19,25 @@
       <file leaf-file-name="PdfGenerator.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/examples/PdfGenerator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="396">
-              <caret line="212" column="0" lean-forward="false" selection-start-line="212" selection-start-column="0" selection-end-line="212" selection-end-column="0" />
+            <state relative-caret-position="410">
+              <caret line="112" column="69" lean-forward="false" selection-start-line="112" selection-start-column="69" selection-end-line="112" selection-end-column="69" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#336#337#0" expanded="true" />
-                <element signature="e#369#370#0" expanded="true" />
                 <element signature="method#createTitle#0;class#PdfGenerator#0" expanded="false" />
-                <element signature="method#createFooter#0;class#PdfGenerator#0" expanded="false" />
                 <element signature="method#createHeader#0;class#PdfGenerator#0" expanded="false" />
-                <element signature="method#getPdfPCell#0;class#PdfGenerator#0" expanded="false" />
-                <element signature="method#createHeaderAdditionInfo#0;class#PdfGenerator#0" expanded="false" />
-                <element signature="method#createHeaderPrescription#0;class#PdfGenerator#0" expanded="false" />
-                <element signature="method#createHeaderPrescriptionSender#0;class#PdfGenerator#0" expanded="false" />
-                <element signature="method#createHeaderBarcode#0;class#PdfGenerator#0" expanded="false" />
+                <element signature="method#createFooter#0;class#PdfGenerator#0" expanded="false" />
                 <element signature="method#createFooterKaz#0;class#PdfGenerator#0" expanded="false" />
                 <element signature="method#createFooterRus#0;class#PdfGenerator#0" expanded="false" />
-                <element signature="method#footerTablePosition#0;class#PdfGenerator#0" expanded="false" />
-                <element signature="method#headerTablePosition#0;class#PdfGenerator#0" expanded="false" />
-                <element signature="method#createIdPackage#0;class#PdfGenerator#0" expanded="false" />
-                <element signature="method#createLogoImage#0;class#PdfGenerator#0" expanded="false" />
-                <element signature="method#createFooterCommonInfo#0;class#PdfGenerator#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ImageUtil.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/utils/ImageUtil.java">
+      <file leaf-file-name="DVDAstanaTitle.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/titles/DVDAstanaTitle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="15" lean-forward="false" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
+            <state relative-caret-position="767">
+              <caret line="51" column="0" lean-forward="true" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -62,26 +45,31 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DateUtil.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/utils/DateUtil.java">
+      <file leaf-file-name="TitleConstructor.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/titles/TitleConstructor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
+            <state relative-caret-position="204">
+              <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#createTable#0;class#TitleConstructor#0" expanded="false" />
+                <element signature="method#createLogoImage#0;class#TitleConstructor#0" expanded="false" />
+                <element signature="method#tablePosition#0;class#TitleConstructor#0" expanded="false" />
+                <element signature="method#getPdfPCell#0;class#TitleConstructor#0" expanded="false" />
+                <element signature="method#createBarcodeInCode#0;class#TitleConstructor#0" expanded="false" />
+                <element signature="method#createIdPackage#0;class#TitleConstructor#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="FontUtil.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/utils/FontUtil.java">
+      <file leaf-file-name="Title.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/titles/Title.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="29" column="60" lean-forward="false" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="60" />
+            <state relative-caret-position="255">
+              <caret line="15" column="55" lean-forward="false" selection-start-line="15" selection-start-column="55" selection-end-line="15" selection-end-column="55" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#fontLoader#0;class#FontUtil#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -90,11 +78,39 @@
       <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="119">
-              <caret line="7" column="4" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
-              <folding>
-                <element signature="e#96#97#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="136">
+              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Form103Dao.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dao/Form103Dao.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-233">
+              <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Form103.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/dto/Form103.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="204">
+              <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="264">
+              <caret line="16" column="21" lean-forward="true" selection-start-line="11" selection-start-column="6" selection-end-line="16" selection-end-column="21" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -104,6 +120,7 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
+        <option value="Interface" />
         <option value="Class" />
       </list>
     </option>
@@ -130,8 +147,21 @@
         <option value="$PROJECT_DIR$/src/main/java/utils/FontUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/utils/DateUtil.java" />
         <option value="$PROJECT_DIR$/src/main/java/utils/ImageUtil.java" />
-        <option value="$PROJECT_DIR$/src/main/java/examples/PdfGenerator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/titles/Body.java" />
+        <option value="$PROJECT_DIR$/src/main/java/titles/bodies/Body.java" />
+        <option value="$PROJECT_DIR$/src/main/java/titles/bodies/DVDAstanaBody.java" />
+        <option value="$PROJECT_DIR$/src/main/java/titles/footers/Footer.java" />
+        <option value="$PROJECT_DIR$/src/main/java/titles/haders/Header.java" />
+        <option value="$PROJECT_DIR$/src/main/java/titles/footers/DVDAstanaFooter.java" />
+        <option value="$PROJECT_DIR$/src/main/java/titles/haders/DVDAstanaHeader.java" />
         <option value="$PROJECT_DIR$/src/main/java/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dto/Form103.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/Form103Dao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/titles/Title.java" />
+        <option value="$PROJECT_DIR$/src/main/java/titles/DVDAstanaTitle.java" />
+        <option value="$PROJECT_DIR$/src/main/java/titles/TitleElement.java" />
+        <option value="$PROJECT_DIR$/src/main/java/titles/TitleConstructor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/examples/PdfGenerator.java" />
       </list>
     </option>
   </component>
@@ -141,11 +171,11 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
-    <option name="x" value="485" />
-    <option name="y" value="65" />
-    <option name="width" value="1612" />
-    <option name="height" value="876" />
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-75" />
+    <option name="y" value="-23" />
+    <option name="width" value="1440" />
+    <option name="height" value="808" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -195,6 +225,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="dao" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="itextTraning" type="b2602c69:ProjectViewProjectNode" />
+              <item name="itextTraning" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="examples" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -203,7 +241,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
+              <item name="titles" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="itextTraning" type="b2602c69:ProjectViewProjectNode" />
@@ -246,13 +284,14 @@
     <property name="project.structure.side.proportion" value="0.0" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
+    <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\KAZPOST_PROJECTS\gep_core\itextTraning\src\main\resources" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="dto" />
       <recent name="examples" />
     </key>
-    <key name="CopyFile.RECENT_KEYS">
+    <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\KAZPOST_PROJECTS\gep_core\itextTraning\src\main\resources" />
     </key>
   </component>
@@ -387,12 +426,12 @@
       <workItem from="1519278907929" duration="13602000" />
       <workItem from="1519355533033" duration="22958000" />
       <workItem from="1519613931642" duration="1729000" />
-      <workItem from="1519615723651" duration="39137000" />
+      <workItem from="1519615723651" duration="57982000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86294000" />
+    <option name="totallyTimeSpent" value="105139000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -404,7 +443,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1616" height="876" extended-state="7" />
+    <frame x="-8" y="-8" width="1616" height="876" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -416,11 +455,11 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22980501" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.07799443" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27377892" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18251929" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -444,7 +483,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="8" />
+      <option name="time" value="11" />
     </breakpoint-manager>
     <watches-manager />
   </component>
@@ -455,23 +494,11 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#336#337#0" expanded="true" />
-            <element signature="e#369#370#0" expanded="true" />
             <element signature="method#createTitle#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#createFooter#0;class#PdfGenerator#0" expanded="false" />
             <element signature="method#createHeader#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#getPdfPCell#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#createHeaderAdditionInfo#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#createHeaderPrescription#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#createHeaderPrescriptionSender#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#createHeaderBarcode#0;class#PdfGenerator#0" expanded="false" />
+            <element signature="method#createFooter#0;class#PdfGenerator#0" expanded="false" />
             <element signature="method#createFooterKaz#0;class#PdfGenerator#0" expanded="false" />
             <element signature="method#createFooterRus#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#footerTablePosition#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#headerTablePosition#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#createIdPackage#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#createLogoImage#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#createFooterCommonInfo#0;class#PdfGenerator#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -756,7 +783,7 @@
         <state relative-caret-position="255">
           <caret line="16" column="7" lean-forward="false" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
           <folding>
-            <element signature="e#96#97#0" expanded="true" />
+            <element signature="e#96#97#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -767,23 +794,11 @@
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#336#337#0" expanded="true" />
-            <element signature="e#369#370#0" expanded="true" />
             <element signature="method#createTitle#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#createFooter#0;class#PdfGenerator#0" expanded="false" />
             <element signature="method#createHeader#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#getPdfPCell#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#createHeaderAdditionInfo#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#createHeaderPrescription#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#createHeaderPrescriptionSender#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#createHeaderBarcode#0;class#PdfGenerator#0" expanded="false" />
+            <element signature="method#createFooter#0;class#PdfGenerator#0" expanded="false" />
             <element signature="method#createFooterKaz#0;class#PdfGenerator#0" expanded="false" />
             <element signature="method#createFooterRus#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#footerTablePosition#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#headerTablePosition#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#createIdPackage#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#createLogoImage#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#createFooterCommonInfo#0;class#PdfGenerator#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1068,7 +1083,7 @@
         <state relative-caret-position="255">
           <caret line="16" column="7" lean-forward="false" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
           <folding>
-            <element signature="e#96#97#0" expanded="true" />
+            <element signature="e#96#97#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1100,7 +1115,7 @@
         <state relative-caret-position="255">
           <caret line="16" column="7" lean-forward="false" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
           <folding>
-            <element signature="e#96#97#0" expanded="true" />
+            <element signature="e#96#97#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1111,23 +1126,11 @@
           <caret line="49" column="0" lean-forward="true" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#336#337#0" expanded="true" />
-            <element signature="e#369#370#0" expanded="true" />
             <element signature="method#createTitle#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#createFooter#0;class#PdfGenerator#0" expanded="false" />
             <element signature="method#createHeader#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#getPdfPCell#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#createHeaderAdditionInfo#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#createHeaderPrescription#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#createHeaderPrescriptionSender#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#createHeaderBarcode#0;class#PdfGenerator#0" expanded="false" />
+            <element signature="method#createFooter#0;class#PdfGenerator#0" expanded="false" />
             <element signature="method#createFooterKaz#0;class#PdfGenerator#0" expanded="false" />
             <element signature="method#createFooterRus#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#footerTablePosition#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#headerTablePosition#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#createIdPackage#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#createLogoImage#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#createFooterCommonInfo#0;class#PdfGenerator#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1152,7 +1155,7 @@
         <state relative-caret-position="272">
           <caret line="16" column="7" lean-forward="true" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
           <folding>
-            <element signature="e#96#97#0" expanded="true" />
+            <element signature="e#96#97#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1163,31 +1166,12 @@
           <caret line="32" column="16" lean-forward="false" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#336#337#0" expanded="true" />
-            <element signature="e#369#370#0" expanded="true" />
             <element signature="method#createTitle#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#createFooter#0;class#PdfGenerator#0" expanded="false" />
             <element signature="method#createHeader#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#getPdfPCell#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#createHeaderAdditionInfo#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#createHeaderPrescription#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#createHeaderPrescriptionSender#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#createHeaderBarcode#0;class#PdfGenerator#0" expanded="false" />
+            <element signature="method#createFooter#0;class#PdfGenerator#0" expanded="false" />
             <element signature="method#createFooterKaz#0;class#PdfGenerator#0" expanded="false" />
             <element signature="method#createFooterRus#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#footerTablePosition#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#headerTablePosition#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#createIdPackage#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#createLogoImage#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#createFooterCommonInfo#0;class#PdfGenerator#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/itextpdf/itextpdf/5.5.13/itextpdf-5.5.13.jar!/com/itextpdf/text/pdf/PdfWriter.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-30">
-          <caret line="231" column="14" lean-forward="false" selection-start-line="231" selection-start-column="14" selection-end-line="231" selection-end-column="14" />
         </state>
       </provider>
     </entry>
@@ -1538,17 +1522,9 @@
         <state relative-caret-position="136">
           <caret line="29" column="60" lean-forward="false" selection-start-line="29" selection-start-column="31" selection-end-line="29" selection-end-column="60" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
             <element signature="method#fontLoader#0;class#FontUtil#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="156">
-          <caret line="12" column="2" lean-forward="true" selection-start-line="12" selection-start-column="2" selection-end-line="17" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1557,7 +1533,7 @@
         <state relative-caret-position="136">
           <caret line="8" column="1" lean-forward="false" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1567,6 +1543,104 @@
         <state relative-caret-position="187">
           <caret line="11" column="15" lean-forward="false" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
           <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/titles/bodies/Body.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="11" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/titles/bodies/DVDAstanaBody.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="8" column="0" lean-forward="true" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/titles/haders/Header.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="5" column="18" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/titles/haders/DVDAstanaHeader.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="0" lean-forward="false" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/titles/footers/Footer.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="0" lean-forward="false" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/titles/footers/DVDAstanaFooter.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/itextpdf/itextpdf/5.5.13/itextpdf-5.5.13.jar!/com/itextpdf/text/pdf/PdfCopy.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="80" column="11" lean-forward="false" selection-start-line="80" selection-start-column="11" selection-end-line="80" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="16" column="21" lean-forward="true" selection-start-line="11" selection-start-column="6" selection-end-line="16" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/itextpdf/itextpdf/5.5.13/itextpdf-5.5.13.jar!/com/itextpdf/text/pdf/PdfWriter.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2138">
+          <caret line="238" column="28" lean-forward="false" selection-start-line="238" selection-start-column="28" selection-end-line="238" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="jar://$MAVEN_REPOSITORY$/com/itextpdf/itextpdf/5.5.13/itextpdf-5.5.13.jar!/com/itextpdf/text/pdf/PdfPCell.class">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="173">
+          <caret line="73" column="11" lean-forward="false" selection-start-line="73" selection-start-column="11" selection-end-line="73" selection-end-column="11" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dto/Form103.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="54" column="0" lean-forward="false" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/titles/Title.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="15" column="55" lean-forward="false" selection-start-line="15" selection-start-column="55" selection-end-line="15" selection-end-column="55" />
+          <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
@@ -1574,37 +1648,57 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="7" column="4" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+        <state relative-caret-position="136">
+          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/Form103Dao.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-233">
+          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/titles/TitleConstructor.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
           <folding>
-            <element signature="e#96#97#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="method#createTable#0;class#TitleConstructor#0" expanded="false" />
+            <element signature="method#createLogoImage#0;class#TitleConstructor#0" expanded="false" />
+            <element signature="method#tablePosition#0;class#TitleConstructor#0" expanded="false" />
+            <element signature="method#getPdfPCell#0;class#TitleConstructor#0" expanded="false" />
+            <element signature="method#createBarcodeInCode#0;class#TitleConstructor#0" expanded="false" />
+            <element signature="method#createIdPackage#0;class#TitleConstructor#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/titles/DVDAstanaTitle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="767">
+          <caret line="51" column="0" lean-forward="true" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/examples/PdfGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="396">
-          <caret line="212" column="0" lean-forward="false" selection-start-line="212" selection-start-column="0" selection-end-line="212" selection-end-column="0" />
+        <state relative-caret-position="410">
+          <caret line="112" column="69" lean-forward="false" selection-start-line="112" selection-start-column="69" selection-end-line="112" selection-end-column="69" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#336#337#0" expanded="true" />
-            <element signature="e#369#370#0" expanded="true" />
             <element signature="method#createTitle#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#createFooter#0;class#PdfGenerator#0" expanded="false" />
             <element signature="method#createHeader#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#getPdfPCell#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#createHeaderAdditionInfo#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#createHeaderPrescription#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#createHeaderPrescriptionSender#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#createHeaderBarcode#0;class#PdfGenerator#0" expanded="false" />
+            <element signature="method#createFooter#0;class#PdfGenerator#0" expanded="false" />
             <element signature="method#createFooterKaz#0;class#PdfGenerator#0" expanded="false" />
             <element signature="method#createFooterRus#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#footerTablePosition#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#headerTablePosition#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#createIdPackage#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#createLogoImage#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#createFooterCommonInfo#0;class#PdfGenerator#0" expanded="false" />
           </folding>
         </state>
       </provider>
