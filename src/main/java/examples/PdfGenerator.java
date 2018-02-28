@@ -1,15 +1,14 @@
 package examples;
 
+import utils.DateUtil;
+import utils.FontUtil;
 import com.itextpdf.text.*;
 import com.itextpdf.text.pdf.*;
+import utils.ImageUtil;
 
 
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
-import java.io.IOException;
-import java.time.LocalDate;
-import java.time.LocalTime;
-import java.time.format.DateTimeFormatter;
 
 public class PdfGenerator {
 
@@ -19,18 +18,20 @@ public class PdfGenerator {
         createTitle(FILE);
     }
 
-    public void createTitle(String dest) {
+    private void createTitle(String dest) {
         try {
             Document document = new Document(PageSize.A4);
             PdfWriter writer = PdfWriter.getInstance(document, new FileOutputStream(dest));
-
             document.open();
-            createDocumentNumber(writer, "01639174");
+
+            createIdPackage(writer, "01639174");
             createHeader(writer);
-            String data = getDate();
-            String time = getTime();
-            createFooterKaz(writer, "Astana", data, time);
-            createFooterRus(writer, "Astana", data, time);
+
+            String data = DateUtil.getDate();
+            String time = DateUtil.getTime();
+
+            createFooter(writer, "Astana", data, time);
+
             document.close();
 
         } catch (DocumentException e) {
@@ -40,18 +41,9 @@ public class PdfGenerator {
         }
     }
 
-    private String getDate() {
-        LocalDate localDate = LocalDate.now();
-        DateTimeFormatter dataFormat = DateTimeFormatter.ofPattern("d-MM-YYYY");
-        String data = dataFormat.format(localDate);
-        return data;
-    }
-
-    private String getTime() {
-        LocalTime localTime = LocalTime.now();
-        DateTimeFormatter timeFormatter = DateTimeFormatter.ofPattern("HH:mm");
-        String time = timeFormatter.format(localTime);
-        return time;
+    private void createFooter(PdfWriter writer, String f6, String date, String time) {
+        createFooterKaz(writer, f6, date, time);
+        createFooterRus(writer, f6, date, time);
     }
 
     private void createHeader(PdfWriter writer) {
@@ -94,12 +86,12 @@ public class PdfGenerator {
         headerBarcodeCell.setPaddingBottom(0);
 
 
-        Phrase shpi = new Phrase("ШПИ", openSansRegular(4));
+        Phrase shpi = new Phrase("ШПИ", FontUtil.openSansRegular(4));
         PdfPCell shpiCell = getPdfPCell(shpi, 0);
         shpiCell.setPaddingBottom(0);
         shpiCell.setPaddingTop(1);
 
-        Phrase barcodeInText = new Phrase("DA010080119KZ", helvetica(7));
+        Phrase barcodeInText = new Phrase("DA010080119KZ", FontUtil.helvetica(7));
         PdfPCell barcodeInTextCell = getPdfPCell(barcodeInText, 0);
         barcodeInTextCell.setPaddingBottom(0);
         barcodeInTextCell.setPaddingLeft(45);
@@ -132,24 +124,22 @@ public class PdfGenerator {
     }
 
     private Phrase createHeaderAdditionInfo(String info) {
-        Phrase phrase = new Phrase(info, openSansRegular(11));
+        Phrase phrase = new Phrase(info, FontUtil.openSansRegular(11));
         return phrase;
     }
 
-
     private Phrase createHeaderPrescription(String prescription) {
-        Phrase phrase = new Phrase(prescription, openSansRegular(7));
+        Phrase phrase = new Phrase(prescription, FontUtil.openSansRegular(7));
         return phrase;
     }
 
     private Phrase createHeaderPrescriptionSender(String sender) {
-        Phrase phrase = new Phrase(sender, openSansRegular(7));
+        Phrase phrase = new Phrase(sender, FontUtil.openSansRegular(7));
         return phrase;
     }
 
     private Phrase createHeaderBarcode(String barcode) {
-
-        Phrase phrase2 = new Phrase("*" + barcode + "*", fre3of9x(24.5f));
+        Phrase phrase2 = new Phrase("*" + barcode + "*", FontUtil.fre3of9x(24.5f));
         return phrase2;
     }
 
@@ -220,9 +210,9 @@ public class PdfGenerator {
         table.writeSelectedRows(FIRST_ROW, LAST_ROW, 330, 738f, contentByte);
     }
 
-    private void createDocumentNumber(PdfWriter writer, String text) {
+    private void createIdPackage(PdfWriter writer, String text) {
         Phrase phrase = new Phrase(text);
-        phrase.setFont(ocrb());
+        phrase.setFont(FontUtil.ocrb(11));
 
         PdfContentByte cb = writer.getDirectContent();
         PdfPTable table = new PdfPTable(1);
@@ -237,87 +227,18 @@ public class PdfGenerator {
     }
 
     private Image createLogoImage() {
-        Image image = null;
-        try {
-            image = Image.getInstance(this.getClass().getClassLoader().getResource("images/logo_hybrid.png"));
-            image.setAbsolutePosition(329f, 740f);
-            image.scaleAbsolute(80f, 23f);
-        } catch (BadElementException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-
+        Image image = ImageUtil.getLogoHybrid();
+        Image image1 = ImageUtil.getLogoHybrid();
+        System.out.println(image+ "   ***   "+image1);
+        image.setAbsolutePosition(329f, 740f);
+        image.scaleAbsolute(80f, 23f);
         return image;
     }
 
-
-    private Font footerFont() {
-        Font font = fontLoader(this.getClass().getClassLoader().getResource("fonts/OpenSans-Bold.ttf").toString());
-        font.setSize(8);
-        return font;
-    }
-
-    private Font ocrb() {
-        Font font = fontLoader(this.getClass().getClassLoader().getResource("fonts/OCRB.TTF").toString());
-        font.setSize(11);
-        return font;
-    }
-
-    private Font openSansLight(int size) {
-        Font font = fontLoader(this.getClass().getClassLoader().getResource("fonts/OpenSans-Light.ttf").toString());
-        font.setSize(size);
-        return font;
-    }
-
-    private Font openSansBold(int size) {
-        Font font = fontLoader(this.getClass().getClassLoader().getResource("fonts/OpenSans-Bold.ttf").toString());
-        font.setSize(size);
-        return font;
-    }
-
-    private Font openSansSemiBold(int size) {
-        Font font = fontLoader(this.getClass().getClassLoader().getResource("fonts/OpenSans-Semibold.ttf").toString());
-        font.setSize(size);
-        return font;
-    }
-
-    private Font openSansRegular(int size) {
-        Font font = fontLoader(this.getClass().getClassLoader().getResource("fonts/OpenSans-Regular.ttf").toString());
-        font.setSize(size);
-        return font;
-    }
-
-    private Font helvetica(int size) {
-        Font font = new Font(Font.FontFamily.HELVETICA);
-        font.setSize(size);
-        return font;
-    }
-
-    private Font fre3of9x(float size) {
-        Font font = fontLoader(this.getClass().getClassLoader().getResource("fonts/fre3of9x.ttf").toString());
-        font.setSize(size);
-        return font;
-    }
-
     private Phrase createFooterCommonInfo(String info) {
-        Phrase phrase = new Phrase(info, openSansRegular(8));
+        Phrase phrase = new Phrase(info, FontUtil.openSansRegular(8));
         return phrase;
     }
 
-    private Font fontLoader(String fontPath) {
-
-        BaseFont bf = null;
-        try {
-            bf = BaseFont.createFont(fontPath, BaseFont.IDENTITY_H, BaseFont.EMBEDDED);
-        } catch (DocumentException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-        Font font = new Font(bf);
-
-        return font;
-    }
 
 }

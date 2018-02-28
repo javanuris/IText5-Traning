@@ -8,7 +8,49 @@ import java.io.IOException;
 
 public class FontUtil {
 
-    private Font fontLoader(String fontPath) {
+    public static Font ocrb(int size) {
+        Font font = fontLoader(ClassLoader.getSystemResource("fonts/OCRB.TTF").toString());
+        font.setSize(size);
+        return font;
+    }
+
+    public static Font openSansLight(int size) {
+        Font font = fontLoader(ClassLoader.getSystemResource("fonts/OpenSans-Light.ttf").toString());
+        font.setSize(size);
+        return font;
+    }
+
+    public static Font openSansBold(int size) {
+        Font font = fontLoader(ClassLoader.getSystemResource("fonts/OpenSans-Bold.ttf").toString());
+        font.setSize(size);
+        return font;
+    }
+
+    public static Font openSansSemiBold(int size) {
+        Font font = fontLoader(ClassLoader.getSystemResource("fonts/OpenSans-Semibold.ttf").toString());
+        font.setSize(size);
+        return font;
+    }
+
+    public static Font openSansRegular(int size) {
+        Font font = fontLoader(ClassLoader.getSystemResource("fonts/OpenSans-Regular.ttf").toString());
+        font.setSize(size);
+        return font;
+    }
+
+    public static Font fre3of9x(float size) {
+        Font font = fontLoader(ClassLoader.getSystemResource("fonts/fre3of9x.ttf").toString());
+        font.setSize(size);
+        return font;
+    }
+
+    public static Font helvetica(int size) {
+        Font font = new Font(Font.FontFamily.HELVETICA);
+        font.setSize(size);
+        return font;
+    }
+
+    private static Font fontLoader(String fontPath) {
 
         BaseFont bf = null;
         try {
