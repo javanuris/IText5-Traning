@@ -10,10 +10,19 @@ import utils.FontUtil;
 import utils.ImageUtil;
 
 public class TitleConstructor {
+    public static final float HEADER_X = 330f;
+    public static final float HEADER_Y = 738f;
 
-    public PdfPTable createTable() {
+    public static final float KAZ_FOOTER_X = 57f;
+    public static final float KAZ_FOOTER_Y = 160f;
+
+    public static final float RUS_FOOTER_X = 57f;
+    public static final float RUS_FOOTER_Y = 110f;
+
+
+    public PdfPTable createHeaderTable() {
         PdfPTable table = new PdfPTable(1);
-        table.setTotalWidth(230);
+        table.setTotalWidth(210);
         table.getDefaultCell().setBorder(0);
         return table;
     }

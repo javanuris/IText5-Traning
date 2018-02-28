@@ -6,10 +6,12 @@ public class Form103Dao {
 
     public Form103 getForm103(){
         Form103 form103 = new Form103();
-        form103.setIdPackage(187100033519142L);
-        form103.setCodePackage("1569408");
+        form103.setIdPackage(1234568);
+        form103.setCodePackage("187100033519142L");
         form103.setBarcode("DA010080119KZ");
-        form103.setF1("КӘДЕН ТАҢАТАР БЕКСҰЛТАНҰЛЫ");
+        form103.setF1("ТОВАРИЩЕСТВО С ОГРАНИЧЕННОЙ " +
+                "ОТВЕТСТВЕННОСТЬЮ " +
+                "\"АВТОХОЗЯЙСТВО АСТАНЫ\" ");
         form103.setF2("ул. КОРГАЛЖЫН, д. 11, корпус -, кв. 13");
         form103.setF3("ЕСИЛЬСКИЙ РАЙОН");
         form103.setF4("АСТАНА");

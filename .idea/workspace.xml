@@ -2,8 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="faa2b0ef-7213-481d-862b-edd709b0edd6" name="Default" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" afterPath="$PROJECT_DIR$/src/main/java/Main.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/examples/PdfGenerator.java" afterPath="$PROJECT_DIR$/src/main/java/examples/PdfGenerator.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/dao/Form103Dao.java" afterPath="$PROJECT_DIR$/src/main/java/dao/Form103Dao.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/examples/PdfGenerator.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/titles/DVDAstanaTitle.java" afterPath="$PROJECT_DIR$/src/main/java/titles/DVDAstanaTitle.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/titles/TitleConstructor.java" afterPath="$PROJECT_DIR$/src/main/java/titles/TitleConstructor.java" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" afterPath="$PROJECT_DIR$/target/classes/Main.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/examples/PdfGenerator.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/titles/DVDAstanaTitle.class" afterPath="$PROJECT_DIR$/target/classes/titles/DVDAstanaTitle.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/titles/TitleConstructor.class" afterPath="$PROJECT_DIR$/target/classes/titles/TitleConstructor.class" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -16,30 +24,18 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="PdfGenerator.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/examples/PdfGenerator.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="410">
-              <caret line="112" column="69" lean-forward="false" selection-start-line="112" selection-start-column="69" selection-end-line="112" selection-end-column="69" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="method#createTitle#0;class#PdfGenerator#0" expanded="false" />
-                <element signature="method#createHeader#0;class#PdfGenerator#0" expanded="false" />
-                <element signature="method#createFooter#0;class#PdfGenerator#0" expanded="false" />
-                <element signature="method#createFooterKaz#0;class#PdfGenerator#0" expanded="false" />
-                <element signature="method#createFooterRus#0;class#PdfGenerator#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="DVDAstanaTitle.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/titles/DVDAstanaTitle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="767">
-              <caret line="51" column="0" lean-forward="true" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+            <state relative-caret-position="226">
+              <caret line="81" column="41" lean-forward="false" selection-start-line="81" selection-start-column="41" selection-end-line="81" selection-end-column="41" />
               <folding>
                 <element signature="imports" expanded="true" />
+                <element signature="method#createTitle#0;class#DVDAstanaTitle#0" expanded="false" />
+                <element signature="method#createBody#0;class#DVDAstanaTitle#0" expanded="false" />
+                <element signature="method#createFooter#0;class#DVDAstanaTitle#0" expanded="false" />
+                <element signature="method#createFooterKaz#0;class#DVDAstanaTitle#0" expanded="false" />
+                <element signature="method#createFooterRus#0;class#DVDAstanaTitle#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -48,15 +44,15 @@
       <file leaf-file-name="TitleConstructor.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/titles/TitleConstructor.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="204">
-              <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+            <state relative-caret-position="243">
+              <caret line="43" column="20" lean-forward="false" selection-start-line="43" selection-start-column="20" selection-end-line="43" selection-end-column="20" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="method#createTable#0;class#TitleConstructor#0" expanded="false" />
                 <element signature="method#createLogoImage#0;class#TitleConstructor#0" expanded="false" />
                 <element signature="method#tablePosition#0;class#TitleConstructor#0" expanded="false" />
-                <element signature="method#getPdfPCell#0;class#TitleConstructor#0" expanded="false" />
                 <element signature="method#createBarcodeInCode#0;class#TitleConstructor#0" expanded="false" />
+                <element signature="e#1691#1692#0" expanded="true" />
+                <element signature="e#1760#1761#0" expanded="true" />
                 <element signature="method#createIdPackage#0;class#TitleConstructor#0" expanded="false" />
               </folding>
             </state>
@@ -75,12 +71,14 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="170">
+              <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -88,8 +86,8 @@
       <file leaf-file-name="Form103Dao.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/dao/Form103Dao.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-233">
-              <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            <state relative-caret-position="238">
+              <caret line="14" column="64" lean-forward="true" selection-start-line="11" selection-start-column="6" selection-end-line="14" selection-end-column="64" />
               <folding />
             </state>
           </provider>
@@ -154,14 +152,14 @@
         <option value="$PROJECT_DIR$/src/main/java/titles/haders/Header.java" />
         <option value="$PROJECT_DIR$/src/main/java/titles/footers/DVDAstanaFooter.java" />
         <option value="$PROJECT_DIR$/src/main/java/titles/haders/DVDAstanaHeader.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/dto/Form103.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/Form103Dao.java" />
         <option value="$PROJECT_DIR$/src/main/java/titles/Title.java" />
-        <option value="$PROJECT_DIR$/src/main/java/titles/DVDAstanaTitle.java" />
         <option value="$PROJECT_DIR$/src/main/java/titles/TitleElement.java" />
-        <option value="$PROJECT_DIR$/src/main/java/titles/TitleConstructor.java" />
         <option value="$PROJECT_DIR$/src/main/java/examples/PdfGenerator.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/titles/TitleConstructor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/dao/Form103Dao.java" />
+        <option value="$PROJECT_DIR$/src/main/java/titles/DVDAstanaTitle.java" />
       </list>
     </option>
   </component>
@@ -172,8 +170,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-75" />
-    <option name="y" value="-23" />
+    <option name="x" value="173" />
+    <option name="y" value="-20" />
     <option name="width" value="1440" />
     <option name="height" value="808" />
   </component>
@@ -233,14 +231,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="examples" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="itextTraning" type="b2602c69:ProjectViewProjectNode" />
-              <item name="itextTraning" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="titles" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -249,14 +239,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="itextTraning" type="b2602c69:ProjectViewProjectNode" />
-              <item name="itextTraning" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="fonts" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="itextTraning" type="b2602c69:ProjectViewProjectNode" />
@@ -426,12 +408,12 @@
       <workItem from="1519278907929" duration="13602000" />
       <workItem from="1519355533033" duration="22958000" />
       <workItem from="1519613931642" duration="1729000" />
-      <workItem from="1519615723651" duration="57982000" />
+      <workItem from="1519615723651" duration="61622000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="105139000" />
+    <option name="totallyTimeSpent" value="108779000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -455,11 +437,11 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.07799443" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1448468" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18251929" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18251929" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -474,6 +456,35 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
+    <layout-to-restore>
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3983287" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29526463" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1448468" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18251929" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
+    </layout-to-restore>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -492,14 +503,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#createTitle#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#createHeader#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#createFooter#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#createFooterKaz#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#createFooterRus#0;class#PdfGenerator#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -783,7 +787,7 @@
         <state relative-caret-position="255">
           <caret line="16" column="7" lean-forward="false" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
           <folding>
-            <element signature="e#96#97#0" expanded="false" />
+            <element signature="e#119#120#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -792,14 +796,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#createTitle#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#createHeader#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#createFooter#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#createFooterKaz#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#createFooterRus#0;class#PdfGenerator#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1083,7 +1080,7 @@
         <state relative-caret-position="255">
           <caret line="16" column="7" lean-forward="false" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
           <folding>
-            <element signature="e#96#97#0" expanded="false" />
+            <element signature="e#119#120#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1115,7 +1112,7 @@
         <state relative-caret-position="255">
           <caret line="16" column="7" lean-forward="false" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
           <folding>
-            <element signature="e#96#97#0" expanded="false" />
+            <element signature="e#119#120#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1124,14 +1121,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="833">
           <caret line="49" column="0" lean-forward="true" selection-start-line="49" selection-start-column="0" selection-end-line="49" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#createTitle#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#createHeader#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#createFooter#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#createFooterKaz#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#createFooterRus#0;class#PdfGenerator#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1155,7 +1145,7 @@
         <state relative-caret-position="272">
           <caret line="16" column="7" lean-forward="true" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
           <folding>
-            <element signature="e#96#97#0" expanded="false" />
+            <element signature="e#119#120#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1164,14 +1154,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="544">
           <caret line="32" column="16" lean-forward="false" selection-start-line="32" selection-start-column="16" selection-end-line="32" selection-end-column="16" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="method#createTitle#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#createHeader#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#createFooter#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#createFooterKaz#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#createFooterRus#0;class#PdfGenerator#0" expanded="false" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1197,11 +1180,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/resources/images/logo_sud.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/images/generate.png">
       <provider selected="true" editor-type-id="images">
         <state />
       </provider>
@@ -1636,6 +1614,19 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/examples/PdfGenerator.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="646">
+          <caret line="55" column="25" lean-forward="false" selection-start-line="55" selection-start-column="25" selection-end-line="55" selection-end-column="25" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/images/generate.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/titles/Title.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
@@ -1646,33 +1637,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="8" column="0" lean-forward="false" selection-start-line="8" selection-start-column="0" selection-end-line="8" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/Form103Dao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-233">
-          <caret line="4" column="13" lean-forward="false" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/titles/TitleConstructor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="12" column="0" lean-forward="true" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+        <state relative-caret-position="243">
+          <caret line="43" column="20" lean-forward="false" selection-start-line="43" selection-start-column="20" selection-end-line="43" selection-end-column="20" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#createTable#0;class#TitleConstructor#0" expanded="false" />
             <element signature="method#createLogoImage#0;class#TitleConstructor#0" expanded="false" />
             <element signature="method#tablePosition#0;class#TitleConstructor#0" expanded="false" />
-            <element signature="method#getPdfPCell#0;class#TitleConstructor#0" expanded="false" />
             <element signature="method#createBarcodeInCode#0;class#TitleConstructor#0" expanded="false" />
+            <element signature="e#1691#1692#0" expanded="true" />
+            <element signature="e#1760#1761#0" expanded="true" />
             <element signature="method#createIdPackage#0;class#TitleConstructor#0" expanded="false" />
           </folding>
         </state>
@@ -1680,25 +1655,33 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/titles/DVDAstanaTitle.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="767">
-          <caret line="51" column="0" lean-forward="true" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
+        <state relative-caret-position="226">
+          <caret line="81" column="41" lean-forward="false" selection-start-line="81" selection-start-column="41" selection-end-line="81" selection-end-column="41" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="method#createTitle#0;class#DVDAstanaTitle#0" expanded="false" />
+            <element signature="method#createBody#0;class#DVDAstanaTitle#0" expanded="false" />
+            <element signature="method#createFooter#0;class#DVDAstanaTitle#0" expanded="false" />
+            <element signature="method#createFooterKaz#0;class#DVDAstanaTitle#0" expanded="false" />
+            <element signature="method#createFooterRus#0;class#DVDAstanaTitle#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/examples/PdfGenerator.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/dao/Form103Dao.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="410">
-          <caret line="112" column="69" lean-forward="false" selection-start-line="112" selection-start-column="69" selection-end-line="112" selection-end-column="69" />
+        <state relative-caret-position="238">
+          <caret line="14" column="64" lean-forward="true" selection-start-line="11" selection-start-column="6" selection-end-line="14" selection-end-column="64" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="170">
+          <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="method#createTitle#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#createHeader#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#createFooter#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#createFooterKaz#0;class#PdfGenerator#0" expanded="false" />
-            <element signature="method#createFooterRus#0;class#PdfGenerator#0" expanded="false" />
           </folding>
         </state>
       </provider>
