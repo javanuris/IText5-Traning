@@ -1,4 +1,4 @@
-package titles;
+package titles.postkz;
 
 import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
@@ -9,7 +9,6 @@ public class PostLegalTitle extends AbstractPostTitle {
 
     @Override
     void sendInformation(PdfWriter writer, PdfPTable table, Form103 form103) {
-
     }
 
     @Override

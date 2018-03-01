@@ -15,12 +15,13 @@ import java.io.FileOutputStream;
 
 public abstract class AbstractTitle implements Title {
     private TitleConstructor construct = new TitleConstructor();
-    public static final float HEADER_X = 330f;
-    public static final float HEADER_Y = 738f;
+    private static final float HEADER_X = 330f;
+    private static final float HEADER_Y = 738f;
 
     @Override
     public ByteArrayOutputStream createTitle(Form103 form103) {
         String FILE = "d:/test/FirstPdf.pdf";
+
         try {
             Document document = new Document(PageSize.A4);
             PdfWriter writer = PdfWriter.getInstance(document, new FileOutputStream(FILE));
@@ -36,7 +37,6 @@ public abstract class AbstractTitle implements Title {
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-
         return null;
     }
 
@@ -71,7 +71,7 @@ public abstract class AbstractTitle implements Title {
         construct.setTablePosition(writer, table, HEADER_X, HEADER_Y);
     }
 
-    abstract void headerMiddle(PdfWriter writer, PdfPTable table, Form103 form103);
+    protected abstract void headerMiddle(PdfWriter writer, PdfPTable table, Form103 form103);
 
     private PdfPTable createHeaderTable() {
         PdfPTable table = new PdfPTable(1);

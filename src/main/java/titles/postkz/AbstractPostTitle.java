@@ -1,21 +1,21 @@
-package titles;
+package titles.postkz;
 
 import com.itextpdf.text.Phrase;
 import com.itextpdf.text.pdf.PdfPCell;
 import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
 import dto.Form103;
+import titles.AbstractTitle;
 import utils.DateUtil;
 import utils.FontUtil;
 
 public abstract class AbstractPostTitle extends AbstractTitle {
 
-    public static final float KAZ_FOOTER_X = 57f;
-    public static final float KAZ_FOOTER_Y = 160f;
+    private static final float KAZ_FOOTER_X = 57f;
+    private static final float KAZ_FOOTER_Y = 160f;
 
-    public static final float RUS_FOOTER_X = 57f;
-    public static final float RUS_FOOTER_Y = 110f;
-
+    private static final float RUS_FOOTER_X = 57f;
+    private static final float RUS_FOOTER_Y = 110f;
 
     @Override
     public void createFooter(PdfWriter writer, Form103 form103) {
@@ -23,7 +23,6 @@ public abstract class AbstractPostTitle extends AbstractTitle {
         String time = DateUtil.getTime();
         createFooterRusAndKaz(writer, form103, date, time, true);
         createFooterRusAndKaz(writer, form103, date, time, false);
-
     }
 
     private void createFooterRusAndKaz(PdfWriter writer, Form103 form103, String date, String hourAndMinute, boolean lang) {
@@ -63,8 +62,7 @@ public abstract class AbstractPostTitle extends AbstractTitle {
 
     }
 
-    @Override
-    void headerMiddle(PdfWriter writer, PdfPTable table, Form103 form103) {
+    public void headerMiddle(PdfWriter writer, PdfPTable table, Form103 form103) {
         sendInformation(writer, table, form103);
 
         Phrase prescriptionSender = new Phrase("от: " + form103.getF6() + ", " + form103.getF7(), FontUtil.openSansRegular(7));
