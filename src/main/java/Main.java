@@ -1,13 +1,12 @@
 import dao.Form103Dao;
-import titles.DVDAstanaTitle;
+import titles.PostLegalTitle;
 
 
 public class Main {
 
     public static void main(String[] args) {
         Form103Dao form103Dao = new Form103Dao();
-        new DVDAstanaTitle().createTitle(form103Dao.getForm103());
-
+        new PostLegalTitle().createTitle(form103Dao.getForm103());
     }
 
 
