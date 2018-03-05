@@ -46,51 +46,53 @@ public abstract class AbstractPostTitle extends AbstractTitle {
             dateAndTime = new Phrase("Хатты өңдеу күні мен уақыты: " + date + " сағат " + hourAndMinute, FontUtil.openSansRegular(8));
         }
 
-        PdfPCell cell1 = getConstruct().getPdfPCell(commonInfo);
-        PdfPCell cell2 = getConstruct().getPdfPCell(documentCreated);
-        PdfPCell cell3 = getConstruct().getPdfPCell(dateAndTime);
+        PdfPCell cell1 = getPdfPCell(commonInfo);
+        PdfPCell cell2 = getPdfPCell(documentCreated);
+        PdfPCell cell3 = getPdfPCell(dateAndTime);
 
         table.addCell(cell1);
         table.addCell(cell2);
         table.addCell(cell3);
 
         if (lang) {
-            getConstruct().setTablePosition(writer, table, RUS_FOOTER_X, RUS_FOOTER_Y);
+            setTablePosition(writer, table, RUS_FOOTER_X, RUS_FOOTER_Y);
         } else {
-            getConstruct().setTablePosition(writer, table, KAZ_FOOTER_X, KAZ_FOOTER_Y);
+            setTablePosition(writer, table, KAZ_FOOTER_X, KAZ_FOOTER_Y);
         }
 
     }
 
-    public void headerMiddle(PdfWriter writer, PdfPTable table, Form103 form103) {
-        sendInformation(writer, table, form103);
+    @Override
+    public void createHeaderMiddle(PdfWriter writer, PdfPTable table, Form103 form103) {
+        setPresentation(writer, table, form103);
 
         Phrase prescriptionSender = new Phrase("от: " + form103.getF6() + ", " + form103.getF7(), FontUtil.openSansRegular(7));
-        PdfPCell prescriptionSenderCell = getConstruct().getPdfPCell(prescriptionSender);
+        PdfPCell prescriptionSenderCell = getPdfPCell(prescriptionSender);
         table.addCell(prescriptionSenderCell);
 
         if (form103.getF1() != null) {
             Phrase f1 = new Phrase(form103.getF1().toUpperCase(), FontUtil.openSansRegular(11));
-            PdfPCell f1Cell = getConstruct().getPdfPCell(f1);
+            PdfPCell f1Cell = getPdfPCell(f1);
             f1Cell.setPaddingTop(1);
             table.addCell(f1Cell);
         }
 
         Phrase f2 = new Phrase(form103.getF2(), FontUtil.openSansRegular(11));
-        PdfPCell f2Cell = getConstruct().getPdfPCell(f2);
+        PdfPCell f2Cell = getPdfPCell(f2);
         f2Cell.setPaddingTop(1);
         table.addCell(f2Cell);
 
         if (form103.getF3() != null && !form103.getF3().equals("")) {
             Phrase f3 = new Phrase(form103.getF3(), FontUtil.openSansRegular(11));
-            PdfPCell f3Cell = getConstruct().getPdfPCell(f3);
+            PdfPCell f3Cell = getPdfPCell(f3);
             table.addCell(f3Cell);
         }
 
         Phrase cityAndIndex = new Phrase(form103.getF4() + ", " + form103.getF5(), FontUtil.openSansRegular(11));
-        PdfPCell cityAndIndexCell = getConstruct().getPdfPCell(cityAndIndex);
+        PdfPCell cityAndIndexCell = getPdfPCell(cityAndIndex);
         table.addCell(cityAndIndexCell);
     }
 
-    abstract void sendInformation(PdfWriter writer, PdfPTable table, Form103 form103);
+
+    abstract void setPresentation(PdfWriter writer, PdfPTable table, Form103 form103);
 }

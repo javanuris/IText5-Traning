@@ -12,9 +12,9 @@ import utils.FontUtil;
 public class DVDAstanaPostTitle extends AbstractPostTitle {
 
     @Override
-    void sendInformation(PdfWriter writer, PdfPTable table, Form103 form103) {
+    void setPresentation(PdfWriter writer, PdfPTable table, Form103 form103) {
         Phrase prescription = new Phrase("ПРЕДПИСАНИЕ/Заказное письмо с уведомлением", FontUtil.openSansRegular(7));
-        PdfPCell prescriptionCell = getConstruct().getPdfPCell(prescription);
+        PdfPCell prescriptionCell = getPdfPCell(prescription);
         prescriptionCell.setPaddingTop(1);
         table.addCell(prescriptionCell);
     }
