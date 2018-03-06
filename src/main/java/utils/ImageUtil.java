@@ -17,4 +17,16 @@ public class ImageUtil {
         }
         return image;
     }
+
+    public static Image getF119Template() {
+        Image image = null;
+        try {
+            image = Image.getInstance(ClassLoader.getSystemResource("images/f119_templateJpg.jpg"));
+        } catch (BadElementException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return image;
+    }
 }
