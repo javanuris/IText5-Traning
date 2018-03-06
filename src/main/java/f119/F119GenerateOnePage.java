@@ -21,12 +21,13 @@ public class F119GenerateOnePage {
             Document document = new Document(PageSize.A4);
             PdfWriter writer = PdfWriter.getInstance(document, new FileOutputStream(FILE));
             document.open();
+            Image image = createF119Image();
             int counter = 0;
             for (Form103 form103 : form103List) {
                 Image f119Image = null;
 
                 if (counter == 0) {
-                    f119Image = getMarkF119(writer.getDirectContentUnder(), createLogoImage(), form103);
+                    f119Image = getMarkF119(writer.getDirectContentUnder(), image, form103);
                     f119Image.setAbsolutePosition(-50f, 358f);
                     document.add(f119Image);
                     document.newPage();
@@ -34,14 +35,14 @@ public class F119GenerateOnePage {
 
                 counter++;
                 if (counter > 0 && counter <= form103List.size() - 1) {
-                    f119Image = getMarkF119(writer.getDirectContentUnder(), createLogoImage(), form103);
+                    f119Image = getMarkF119(writer.getDirectContentUnder(), image, form103);
                     if (counter % 2 == 0) {
                         f119Image.setAbsolutePosition(-50f, -57f);
                     } else {
                         f119Image.setAbsolutePosition(-50f, 358f);
                     }
                 } else {
-                    f119Image = getMarkF119(writer.getDirectContentUnder(), createLogoImage(), form103);
+                    f119Image = getMarkF119(writer.getDirectContentUnder(), image, form103);
                     f119Image.setAbsolutePosition(-50f, -57f);
                 }
                 document.add(f119Image);
@@ -50,15 +51,15 @@ public class F119GenerateOnePage {
                 }
             }
             document.close();
-        } catch (DocumentException e) {
-            e.printStackTrace();
         } catch (FileNotFoundException e) {
             e.printStackTrace();
         }
-
+        catch (DocumentException e) {
+            e.printStackTrace();
+        }
     }
 
-    private Image createLogoImage() {
+    private Image createF119Image() {
         Image image = ImageUtil.getF119Template();
         image.scaleAbsolute(695f, 580f);
         return image;
@@ -71,7 +72,7 @@ public class F119GenerateOnePage {
 
         template.addImage(img, width, 0, 0, height, 0, 0);
         ColumnText.showTextAligned(template, Element.ALIGN_CENTER, new Phrase(form103.getF1(), FontUtil.openSansRegular(14)), width / 2, height / 2, 0);
-
+        img.setTemplateData(template);
         return Image.getInstance(template);
     }
 }
