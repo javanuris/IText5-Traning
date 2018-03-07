@@ -11,19 +11,27 @@ import java.util.Random;
 public class Main {
 
 
-    public static void main(String[] args) {
+
+public static void main(String[] args) {
         List<Form103> form103s = new ArrayList<>();
         Form103Dao dao = new Form103Dao();
 
+        String str = "12346798";
+        String [] arr = str.split("");
 
-        for (int i = 0; i < 6; i++) {
-            Form103 form103 = new Form103();
-            form103.setF6("" + i);
-            form103s.add(form103);
+        for(int i = 0; i < str.length(); i++){
+            System.out.println(arr[i]);
+        }
+
+
+         for (int i = 0; i < 7; i++) {
+            form103s.add(dao.getForm103());
         }
 
         new F119GenerateOnePage().generate(form103s);
-    }
+
+
+}
 
 }
 

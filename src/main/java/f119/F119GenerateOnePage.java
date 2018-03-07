@@ -18,11 +18,7 @@ public class F119GenerateOnePage {
 
     public void generate(List<Form103> form103List) {
 
-        form103List = sort(form103List);
-
-        for (Form103 s : form103List) {
-            System.out.println(s.getF6());
-        }
+        form103List = orderF119(form103List);
 
         try {
             String FILE = "d:/test/F119Pdf.pdf";
@@ -36,7 +32,7 @@ public class F119GenerateOnePage {
 
 
                 if (counter >= 1) {
-                    if (counter >0 && counter <= form103List.size() -2) {
+                    if (counter <= form103List.size() - 2) {
                         f119Image = getMarkF119(writer.getDirectContentUnder(), image, form103);
                         if (counter % 2 == 0) {
                             f119Image.setAbsolutePosition(-50f, -57f);
@@ -88,12 +84,36 @@ public class F119GenerateOnePage {
         ColumnText.showTextAligned(template, Element.ALIGN_UNDEFINED, new Phrase("*" + form103.getBarcode() + "*", FontUtil.fre3of9x(24.5f)), 110, 385, 0);
         ColumnText.showTextAligned(template, Element.ALIGN_UNDEFINED, new Phrase(form103.getBarcode(), FontUtil.openSansRegular(10)), 110, 375, 0);
         ColumnText.showTextAligned(template, Element.ALIGN_UNDEFINED, new Phrase(form103.getF6(), FontUtil.openSansRegular(7)), 145, 347, 0);
-        ColumnText.showTextAligned(template, Element.ALIGN_UNDEFINED, new Phrase(firstLine(form103.getF7(), 0, 42), FontUtil.openSansRegular(7)), 185, 327, 0);
-        ColumnText.showTextAligned(template, Element.ALIGN_UNDEFINED, new Phrase(secondLine(form103.getF7(), 43, 91), FontUtil.openSansRegular(7)), 108, 307, 0);
-        Paragraph paragraph = new Paragraph(form103.getF5(), FontUtil.courier(12));
-        paragraph.setSpacingAfter(5);
-        ColumnText.showTextAligned(template, Element.ALIGN_UNDEFINED, paragraph, 300, 307, 0);
+        ColumnText.showTextAligned(template, Element.ALIGN_UNDEFINED, new Phrase(firstLine(form103.getF7(), 0, 42), FontUtil.openSansRegular(7)), 185, 325, 0);
+        ColumnText.showTextAligned(template, Element.ALIGN_UNDEFINED, new Phrase(secondLine(form103.getF7(), 43, 91), FontUtil.openSansRegular(7)), 108, 306, 0);
 
+        if (form103.getF15() != null) {
+            String[] everyIndexNumber = form103.getF15().split("");
+            int offset = 0;
+            for (int i = 0; i < everyIndexNumber.length; i++) {
+                Paragraph paragraph = new Paragraph(i + "", FontUtil.courier(12));
+                ColumnText.showTextAligned(template, Element.ALIGN_UNDEFINED, paragraph, 292 + offset, 306, 0);
+                offset += 10;
+
+            }
+        }
+
+        ColumnText.showTextAligned(template, Element.ALIGN_UNDEFINED, new Phrase(form103.getF1(), FontUtil.openSansRegular(7)), 145, 273, 0);
+
+        ColumnText.showTextAligned(template, Element.ALIGN_UNDEFINED, new Phrase(firstLine(form103.getF4(), 0, 40), FontUtil.openSansRegular(7)), 175, 253, 0);
+        ColumnText.showTextAligned(template, Element.ALIGN_UNDEFINED, new Phrase(secondLine(form103.getF4(), 41, 91), FontUtil.openSansRegular(7)), 108, 234, 0);
+
+
+        if (form103.getF5() != null) {
+            String[] everyIndexNumber = form103.getF5().split("");
+            int offset = 0;
+            for (int i = 0; i < everyIndexNumber.length; i++) {
+                Paragraph paragraph = new Paragraph(i + "", FontUtil.courier(12));
+                ColumnText.showTextAligned(template, Element.ALIGN_UNDEFINED, paragraph, 292 + offset, 233, 0);
+                offset += 10;
+
+            }
+        }
 
         img.setTemplateData(template);
         return Image.getInstance(template);
@@ -131,7 +151,7 @@ public class F119GenerateOnePage {
         return line;
     }
 
-    private List<Form103> sort(List<Form103> listOld) {
+    private List<Form103> orderF119(List<Form103> listOld) {
         List<Form103> listNew = new ArrayList<>();
 
         for (int i = 0; i < listOld.size(); i++) {
@@ -155,7 +175,6 @@ public class F119GenerateOnePage {
                     listNew.set(listNew.size() - 1, listOld.get(listOld.size() - 1));
                 }
             }
-
         }
         return listNew;
 
