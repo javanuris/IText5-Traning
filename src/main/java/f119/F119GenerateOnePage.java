@@ -18,7 +18,7 @@ public class F119GenerateOnePage {
 
     public void generate(List<Form103> form103List) {
 
-        //    form103List = sort(form103List);
+        form103List = sort(form103List);
 
         for (Form103 s : form103List) {
             System.out.println(s.getF6());
@@ -34,15 +34,9 @@ public class F119GenerateOnePage {
             for (Form103 form103 : form103List) {
                 Image f119Image = null;
 
-                if (counter == 0) {
-                    f119Image = getMarkF119(writer.getDirectContentUnder(), image, form103);
-                    f119Image.setAbsolutePosition(-50f, 358f);
-                    document.add(f119Image);
-                    document.newPage();
-                }
 
-                    counter++;
-                    if (counter > 0 && counter <= form103List.size() - 1) {
+                if (counter >= 1) {
+                    if (counter >0 && counter <= form103List.size() -2) {
                         f119Image = getMarkF119(writer.getDirectContentUnder(), image, form103);
                         if (counter % 2 == 0) {
                             f119Image.setAbsolutePosition(-50f, -57f);
@@ -58,7 +52,16 @@ public class F119GenerateOnePage {
                     if (counter % 2 == 0) {
                         document.newPage();
                     }
+                }
 
+                if (counter == 0) {
+                    f119Image = getMarkF119(writer.getDirectContentUnder(), image, form103);
+                    f119Image.setAbsolutePosition(-50f, 358f);
+                    document.add(f119Image);
+                    document.newPage();
+                }
+
+                counter++;
 
             }
             document.close();
