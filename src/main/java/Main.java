@@ -10,20 +10,21 @@ import java.util.Random;
 
 public class Main {
 
+
     public static void main(String[] args) {
         List<Form103> form103s = new ArrayList<>();
+        Form103Dao dao = new Form103Dao();
 
-        int ic = 0;
-        for (int i = 0; i < 17; i++) {
-            Form103 form103 =  new Form103();
-            form103.setF1(ic++ + "");
+
+        for (int i = 0; i < 6; i++) {
+            Form103 form103 = new Form103();
+            form103.setF6("" + i);
             form103s.add(form103);
-
         }
 
         new F119GenerateOnePage().generate(form103s);
     }
 
-
 }
+
 

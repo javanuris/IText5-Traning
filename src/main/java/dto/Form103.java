@@ -443,4 +443,9 @@ public class Form103 {
     public void setResipientPhone(String resipientPhone) {
         this.resipientPhone = resipientPhone;
     }
+
+    @Override
+    public String toString() {
+        return f25;
+    }
 }

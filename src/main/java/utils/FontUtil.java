@@ -44,6 +44,14 @@ public class FontUtil {
         return font;
     }
 
+    public static Font courier(float size) {
+        Font font = fontLoader(ClassLoader.getSystemResource("fonts/cour.ttf").toString());
+        font.setSize(size);
+        font.setStyle(Font.BOLD);
+        return font;
+    }
+
+
     public static Font helvetica(int size) {
         Font font = new Font(Font.FontFamily.HELVETICA);
         font.setSize(size);
