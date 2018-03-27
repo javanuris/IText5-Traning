@@ -6,30 +6,43 @@ import com.itextpdf.text.pdf.PdfContentByte;
 import com.itextpdf.text.pdf.PdfTemplate;
 import com.itextpdf.text.pdf.PdfWriter;
 import dto.Form103;
+import store.FileStoreService;
+import store.FtpFileStoreServiceImpl;
 import utils.FontUtil;
 import utils.ImageUtil;
 
+import java.io.ByteArrayOutputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class F119GenerateOnePage {
 
-    public void generate(List<Form103> form103List) {
+    private FileStoreService fileStoreService;
+
+    public Map<ByteArrayOutputStream, String> generate(List<Form103> form103List) {
+        fileStoreService = new FtpFileStoreServiceImpl();
+        ByteArrayOutputStream outputFile = new ByteArrayOutputStream();
 
         form103List = orderF119(form103List);
 
         try {
             String FILE = "d:/test/F119Pdf.pdf";
             Document document = new Document(PageSize.A4);
-            PdfWriter writer = PdfWriter.getInstance(document, new FileOutputStream(FILE));
+            PdfWriter writer = null;
+            try {
+                writer = PdfWriter.getInstance(document, new FileOutputStream(FILE));
+            } catch (FileNotFoundException e) {
+                e.printStackTrace();
+            }
             document.open();
             Image image = createF119Image();
             int counter = 0;
             for (Form103 form103 : form103List) {
                 Image f119Image = null;
-
 
                 if (counter >= 1) {
                     if (counter <= form103List.size() - 2) {
@@ -56,16 +69,21 @@ public class F119GenerateOnePage {
                     document.add(f119Image);
                     document.newPage();
                 }
-
                 counter++;
-
             }
             document.close();
-        } catch (FileNotFoundException e) {
-            e.printStackTrace();
         } catch (DocumentException e) {
             e.printStackTrace();
         }
+
+        Map<String,ByteArrayOutputStream> map = new HashMap<>();
+      for (int i = 0 ; i < 50; i++){
+          map.put(i+"test_f119.pdf",outputFile);
+      }
+
+
+        fileStoreService.saveFile(map);
+        return null;
     }
 
     private Image createF119Image() {
@@ -91,7 +109,7 @@ public class F119GenerateOnePage {
             String[] everyIndexNumber = form103.getF15().split("");
             int offset = 0;
             for (int i = 0; i < everyIndexNumber.length; i++) {
-                Paragraph paragraph = new Paragraph(i + "", FontUtil.courier(12));
+                Paragraph paragraph = new Paragraph(everyIndexNumber[i], FontUtil.courier(12));
                 ColumnText.showTextAligned(template, Element.ALIGN_UNDEFINED, paragraph, 292 + offset, 306, 0);
                 offset += 10;
 
@@ -99,7 +117,6 @@ public class F119GenerateOnePage {
         }
 
         ColumnText.showTextAligned(template, Element.ALIGN_UNDEFINED, new Phrase(form103.getF1(), FontUtil.openSansRegular(7)), 145, 273, 0);
-
         ColumnText.showTextAligned(template, Element.ALIGN_UNDEFINED, new Phrase(firstLine(form103.getF4(), 0, 40), FontUtil.openSansRegular(7)), 175, 253, 0);
         ColumnText.showTextAligned(template, Element.ALIGN_UNDEFINED, new Phrase(secondLine(form103.getF4(), 41, 91), FontUtil.openSansRegular(7)), 108, 234, 0);
 
@@ -108,7 +125,7 @@ public class F119GenerateOnePage {
             String[] everyIndexNumber = form103.getF5().split("");
             int offset = 0;
             for (int i = 0; i < everyIndexNumber.length; i++) {
-                Paragraph paragraph = new Paragraph(i + "", FontUtil.courier(12));
+                Paragraph paragraph = new Paragraph(everyIndexNumber[i], FontUtil.courier(12));
                 ColumnText.showTextAligned(template, Element.ALIGN_UNDEFINED, paragraph, 292 + offset, 233, 0);
                 offset += 10;
 
@@ -151,32 +168,40 @@ public class F119GenerateOnePage {
         return line;
     }
 
-    private List<Form103> orderF119(List<Form103> listOld) {
-        List<Form103> listNew = new ArrayList<>();
+    private static final int ONE_F119 = 1;
+    private static final int TWO_F119 = 2;
+    private static final int FIRST_F119 = 0;
+    private static final int SECOND_F119 = 1;
 
-        for (int i = 0; i < listOld.size(); i++) {
-            listNew.add(new Form103());
+    private List<Form103> orderF119(List<Form103> listBefore) {
+        List<Form103> listAfter = new ArrayList<>();
+
+        for (int i = 0; i < listBefore.size(); i++) {
+            listAfter.add(new Form103());
         }
 
-        if (listOld.size() == 1) {
-            listNew.set(0, listOld.get(0));
-        } else if (listOld.size() == 2) {
-            listNew.set(0, listOld.get(0));
-            listNew.set(1, listOld.get(1));
+        if (listBefore.size() == ONE_F119) {
+            listAfter.set(0, listBefore.get(FIRST_F119));
+        } else if (listBefore.size() == TWO_F119) {
+            listAfter.set(0, listBefore.get(FIRST_F119));
+            listAfter.set(1, listBefore.get(SECOND_F119));
         } else {
-            for (int i = 0; i < listOld.size() - 2; i++) {
+            for (int i = 0; i < listBefore.size() - 2; i++) {
                 i++;
+                //first
+                listAfter.set(0, listBefore.get(FIRST_F119));
 
-                listNew.set(0, listOld.get(0));
-                listNew.set(i, listOld.get(i + 1));
-                listNew.set(i + 1, listOld.get(i));
+                //to swap
+                listAfter.set(i, listBefore.get(i + 1));
+                listAfter.set(i + 1, listBefore.get(i));
 
-                if (listOld.size() % 2 == 0) {
-                    listNew.set(listNew.size() - 1, listOld.get(listOld.size() - 1));
+                //last
+                if (listBefore.size() % 2 == 0) {
+                    listAfter.set(listAfter.size() - 1, listBefore.get(listBefore.size() - 1));
                 }
             }
         }
-        return listNew;
+        return listAfter;
 
     }
 

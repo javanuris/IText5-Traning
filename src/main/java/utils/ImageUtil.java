@@ -18,6 +18,18 @@ public class ImageUtil {
         return image;
     }
 
+    public static Image getLogoSud() {
+        Image image = null;
+        try {
+            image = Image.getInstance(ClassLoader.getSystemResource("images/logo_sud.png"));
+        } catch (BadElementException e) {
+            e.printStackTrace();
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
+        return image;
+    }
+
     public static Image getF119Template() {
         Image image = null;
         try {

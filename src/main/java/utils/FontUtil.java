@@ -20,6 +20,7 @@ public class FontUtil {
         return font;
     }
 
+
     public static Font openSansBold(int size) {
         Font font = fontLoader(ClassLoader.getSystemResource("fonts/OpenSans-Bold.ttf").toString());
         font.setSize(size);
