@@ -7,11 +7,15 @@ import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
 import dto.Form103;
 import titles.AbstractTitle;
+import titles.povestka.lang.AbstractLangTemplate;
 import utils.FontUtil;
 import utils.ImageUtil;
 
 
 public abstract class AbstractPovestkaTitle extends AbstractTitle {
+
+
+    protected abstract AbstractLangTemplate templ();
 
     @Override
     protected void createHeaderMiddle(PdfWriter writer, PdfPTable table, Form103 form103) {
@@ -22,8 +26,8 @@ public abstract class AbstractPovestkaTitle extends AbstractTitle {
             e.printStackTrace();
         }
 
-        Phrase prescriptionSender = new Phrase("Судебная повестка", FontUtil.openSansBold(7));
-        addCell(table, prescriptionSender, 10);
+        Phrase sudPovestka = new Phrase(templ().getSudPovestka(), FontUtil.openSansBold(7));
+        addCell(table, sudPovestka, 10);
 
         String senderAndFromStr = String.format("от: %s %s", form103.getF6(), form103.getF10());
         Phrase senderAndFrom = new Phrase(senderAndFromStr, FontUtil.openSansRegular(7));
@@ -32,23 +36,20 @@ public abstract class AbstractPovestkaTitle extends AbstractTitle {
         Phrase f1 = new Phrase(form103.getF1().toUpperCase(), FontUtil.openSansBold(8));
         addCell(table, f1, 3);
 
-
         Phrase f2 = new Phrase(form103.getF2(), FontUtil.openSansBold(8));
         addCell(table, f2, 1);
 
         Phrase f3 = new Phrase(form103.getF3(), FontUtil.openSansBold(8));
         addCell(table, f3, 1);
 
-
         String addressStr = String.format("%s, %s", form103.getF4(), form103.getF5());
         Phrase address = new Phrase(addressStr, FontUtil.openSansBold(8));
         addCell(table, address, 2);
 
-
         if (form103.getResipientPhone() != null) {
-            Phrase recipientPhone = new Phrase("тел: " + form103.getResipientPhone(), FontUtil.openSansBold(8));
+            String recipientPhoneStr = String.format("тел: %s", form103.getResipientPhone());
+            Phrase recipientPhone = new Phrase(recipientPhoneStr, FontUtil.openSansBold(8));
             addCell(table, recipientPhone, 2);
-
         }
     }
 
@@ -57,7 +58,8 @@ public abstract class AbstractPovestkaTitle extends AbstractTitle {
         PdfPTable table = new PdfPTable(1);
         table.setTotalWidth(490);
 
-        Phrase povestka = new Phrase("СУДЕБНАЯ ПОВЕСТКА/ИЗВЕЩЕНИЕ", FontUtil.openSansBold(15));
+        String povestkaStr = String.format("СУДЕБНАЯ ПОВЕСТКА/ИЗВЕЩЕНИЕ");
+        Phrase povestka = new Phrase(povestkaStr, FontUtil.openSansBold(15));
         PdfPCell povestkaCell = getPdfPCell(povestka);
         povestkaCell.setPaddingLeft(106f);
         table.addCell(povestkaCell);
@@ -99,7 +101,6 @@ public abstract class AbstractPovestkaTitle extends AbstractTitle {
         Phrase demandOne = new Phrase(demandOneStr, FontUtil.openSansRegular(10));
         addCell(table, demandOne, 1);
 
-
         String demandTwoStr = String.format("   При себе иметь документ, удостоверяющий личность.");
         Phrase demandTwo = new Phrase(demandTwoStr, FontUtil.openSansRegular(10));
         addCell(table, demandTwo, 2);
@@ -112,11 +113,9 @@ public abstract class AbstractPovestkaTitle extends AbstractTitle {
         Phrase phoneNumber = new Phrase(phoneNumberStr, FontUtil.openSansLight(10));
         addCell(table, phoneNumber, 1);
 
-
         String officePhoneNumberStr = String.format("     Телефон заведующего канцелярии: %s", form103.getF19());
         Phrase officePhoneNumber = new Phrase(officePhoneNumberStr, FontUtil.openSansLight(10));
         addCell(table, officePhoneNumber, 1);
-
 
         if (form103.getF18() != null) {
             String judgeStr = String.format("     Судья: %s", form103.getF18().toUpperCase());
@@ -128,12 +127,6 @@ public abstract class AbstractPovestkaTitle extends AbstractTitle {
     }
 
 
-    protected void addCell(PdfPTable table, Phrase phrase, float paddingTop) {
-        PdfPCell toCell = getPdfPCell(phrase);
-        toCell.setPaddingTop(paddingTop);
-        table.addCell(toCell);
-    }
-
     protected abstract void setDemandThree(PdfPTable table);
 
     @Override
@@ -142,6 +135,7 @@ public abstract class AbstractPovestkaTitle extends AbstractTitle {
 
         PdfPTable table = new PdfPTable(1);
         table.setTotalWidth(490);
+
         String descriptionStr = String.format("       На сайте Верховного Суда www.sud.gov.kz для граждан и юридических лиц реализованы:\n" +
                 "- возможность подачи обращения, заявления (жалобы) и ходатайства в онлайн режиме через электронный сервис «Судебный кабинет»;\n" +
                 "- ознакомление с судебными документами в электронном сервисе «Ознакомление с судебными документами»;\n" +
@@ -194,7 +188,6 @@ public abstract class AbstractPovestkaTitle extends AbstractTitle {
         Phrase text1 = new Phrase(text1Str, FontUtil.openSansLight(8));
         addCell(table, text1, 1);
 
-
         String text2Str = String.format("1401 ( бесплатно по всему РК )");
         Phrase text2 = new Phrase(text2Str, FontUtil.openSansLight(8));
         addCell(table, text2, 2);
@@ -225,4 +218,12 @@ public abstract class AbstractPovestkaTitle extends AbstractTitle {
         image.scaleAbsolute(151f, 100f);
         return image;
     }
+
+
+    protected void addCell(PdfPTable table, Phrase phrase, float paddingTop) {
+        PdfPCell toCell = getPdfPCell(phrase);
+        toCell.setPaddingTop(paddingTop);
+        table.addCell(toCell);
+    }
+
 }

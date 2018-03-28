@@ -1,12 +1,11 @@
-package titles.povestka;
-
+package titles.povestka.kaz;
 
 import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
 import dto.Form103;
+import titles.povestka.AbstractPovestkaKazTitle;
 
-public class CriminalPovestkaTitle extends AbstractPovestkaTitle {
-
+public class CriminalPovestkaKazTitle extends AbstractPovestkaKazTitle {
     @Override
     protected void setDemandThree(PdfPTable table) {
 
