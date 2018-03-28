@@ -26,7 +26,7 @@ public class Form103Dao {
         form103.setF13("БЕКМАГАНБЕТОВА САБИНА АБИЛТАЕВНА");
         form103.setF14("");
         form103.setF15("010000");
-        form103.setF16("");
+        form103.setF16("nuris");
         form103.setF17("");
         form103.setF18("ДАУТОВ ДУЛАТ АХМЕТЖАНОВИЧ");
         form103.setF19("8-7215-63-52-43");
