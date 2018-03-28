@@ -29,7 +29,7 @@ public abstract class AbstractPovestkaTitle extends AbstractTitle {
         Phrase sudPovestka = new Phrase(templ().getSudPovestka(), FontUtil.openSansBold(7));
         addCell(table, sudPovestka, 10);
 
-        String senderAndFromStr = String.format("от: %s %s", form103.getF6(), form103.getF10());
+        String senderAndFromStr = String.format(templ().getSenderAndFrom(), form103.getF6(), form103.getF10());
         Phrase senderAndFrom = new Phrase(senderAndFromStr, FontUtil.openSansRegular(7));
         addCell(table, senderAndFrom, 1);
 
@@ -58,37 +58,37 @@ public abstract class AbstractPovestkaTitle extends AbstractTitle {
         PdfPTable table = new PdfPTable(1);
         table.setTotalWidth(490);
 
-        String povestkaStr = String.format("СУДЕБНАЯ ПОВЕСТКА/ИЗВЕЩЕНИЕ");
+        String povestkaStr = String.format(templ().getPovestka());
         Phrase povestka = new Phrase(povestkaStr, FontUtil.openSansBold(15));
         PdfPCell povestkaCell = getPdfPCell(povestka);
         povestkaCell.setPaddingLeft(106f);
         table.addCell(povestkaCell);
 
-        String receiverStr = String.format("  Кому: %s", form103.getF1());
+        String receiverStr = String.format(templ().getReceiver(), form103.getF1());
         Phrase receiver = new Phrase(receiverStr, FontUtil.openSansLight(10));
         addCell(table, receiver, 32);
 
-        String addressStr = String.format("  Куда: %s %s %s %s", form103.getF2(), form103.getF3(), form103.getF4(), form103.getF5());
+        String addressStr = String.format(templ().getAddress(), form103.getF2(), form103.getF3(), form103.getF4(), form103.getF5());
         Phrase address = new Phrase(addressStr, FontUtil.openSansLight(10));
         addCell(table, address, 2);
 
-        String sudStr = String.format("  Суд: %s", form103.getF6());
+        String sudStr = String.format(templ().getSud(), form103.getF6());
         Phrase sud = new Phrase(sudStr, FontUtil.openSansLight(10));
         addCell(table, sud, 10f);
 
-        String callYouStr = String.format("  вызывает Вас по адресу: %s", form103.getF10());
+        String callYouStr = String.format(templ().getCallYou(), form103.getF10());
         Phrase callYou = new Phrase(callYouStr, FontUtil.openSansLight(10));
         addCell(table, callYou, 2);
 
-        String toStr = String.format("  на: %s", form103.getF7());
+        String toStr = String.format(templ().getTo(), form103.getF7());
         Phrase to = new Phrase(toStr, FontUtil.openSansLight(10));
         addCell(table, to, 2);
 
-        String dealStr = String.format("  по делу: %s", form103.getF8());
+        String dealStr = String.format(templ().getDeal(), form103.getF8());
         Phrase deal = new Phrase(dealStr, FontUtil.openSansLight(10));
         addCell(table, deal, 2);
 
-        String asStr = String.format("  в качестве: %s", form103.getF9());
+        String asStr = String.format(templ().getAs(), form103.getF9());
         Phrase as = new Phrase(asStr, FontUtil.openSansLight(10));
         PdfPCell asCell = getPdfPCell(as);
         asCell.setPaddingTop(2f);
@@ -97,28 +97,28 @@ public abstract class AbstractPovestkaTitle extends AbstractTitle {
 
         setDemandThree(table);
 
-        String demandOneStr = String.format("   Лицо, принявшее повестку, обязано при первой возможности вручить её адресату.\n   Уклонение без уважительных причин участников процесса и иных лиц от явки в суд влечет административную ответственность (ст.513 КоАП).\n");
+        String demandOneStr = String.format(templ().getDemandOne());
         Phrase demandOne = new Phrase(demandOneStr, FontUtil.openSansRegular(10));
         addCell(table, demandOne, 1);
 
-        String demandTwoStr = String.format("   При себе иметь документ, удостоверяющий личность.");
+        String demandTwoStr = String.format(templ().getDemandTwo());
         Phrase demandTwo = new Phrase(demandTwoStr, FontUtil.openSansRegular(10));
         addCell(table, demandTwo, 2);
 
-        String secretaryStr = String.format("     Секретарь судебного заседания: %s", form103.getF13());
+        String secretaryStr = String.format(templ().getSecretary(), form103.getF13());
         Phrase secretary = new Phrase(secretaryStr, FontUtil.openSansLight(10));
         addCell(table, secretary, 10);
 
-        String phoneNumberStr = String.format("     Телефон: %s", form103.getF12());
+        String phoneNumberStr = String.format(templ().getPhoneNumber(), form103.getF12());
         Phrase phoneNumber = new Phrase(phoneNumberStr, FontUtil.openSansLight(10));
         addCell(table, phoneNumber, 1);
 
-        String officePhoneNumberStr = String.format("     Телефон заведующего канцелярии: %s", form103.getF19());
+        String officePhoneNumberStr = String.format(templ().getOfficePhoneNumber(), form103.getF19());
         Phrase officePhoneNumber = new Phrase(officePhoneNumberStr, FontUtil.openSansLight(10));
         addCell(table, officePhoneNumber, 1);
 
         if (form103.getF18() != null) {
-            String judgeStr = String.format("     Судья: %s", form103.getF18().toUpperCase());
+            String judgeStr = String.format(templ().getJudge(), form103.getF18().toUpperCase());
             Phrase judge = new Phrase(judgeStr, FontUtil.openSansLight(10));
             addCell(table, judge, 1);
 
@@ -136,12 +136,7 @@ public abstract class AbstractPovestkaTitle extends AbstractTitle {
         PdfPTable table = new PdfPTable(1);
         table.setTotalWidth(490);
 
-        String descriptionStr = String.format("       На сайте Верховного Суда www.sud.gov.kz для граждан и юридических лиц реализованы:\n" +
-                "- возможность подачи обращения, заявления (жалобы) и ходатайства в онлайн режиме через электронный сервис «Судебный кабинет»;\n" +
-                "- ознакомление с судебными документами в электронном сервисе «Ознакомление с судебными документами»;\n" +
-                "- ознакомление со списком слушаний судебных дел;\n" +
-                "- распечатка электронной судебной повестки в модуле «Судебная повестка» по коду, полученному СМС-сообщением на сотовый телефон.\n" +
-                "По возникшим вопросам звонить в Сall-центр судебных органов с городских телефонов на номер 1401(бесплатно), с мобильных телефонов на номер 8-7172-710000 (платно).\n");
+        String descriptionStr = String.format(templ().getDescription());
         Phrase description = new Phrase(descriptionStr, FontUtil.openSansBold(8));
         description.setLeading(10);
         addCell(table, description, 1);
@@ -184,15 +179,15 @@ public abstract class AbstractPovestkaTitle extends AbstractTitle {
         PdfPTable table = new PdfPTable(1);
         table.setTotalWidth(150);
 
-        String text1Str = String.format("Контакт-Центр ВС:");
+        String text1Str = String.format(templ().getText1());
         Phrase text1 = new Phrase(text1Str, FontUtil.openSansLight(8));
         addCell(table, text1, 1);
 
-        String text2Str = String.format("1401 ( бесплатно по всему РК )");
+        String text2Str = String.format(templ().getText2());
         Phrase text2 = new Phrase(text2Str, FontUtil.openSansLight(8));
         addCell(table, text2, 2);
 
-        String text3Str = String.format("8 (7172) 710 000");
+        String text3Str = String.format(templ().getText3());
         Phrase text3 = new Phrase(text3Str, FontUtil.openSansLight(8));
         addCell(table, text3, 2);
 

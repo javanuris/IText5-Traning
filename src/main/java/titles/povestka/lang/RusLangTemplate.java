@@ -9,7 +9,7 @@ public class RusLangTemplate extends AbstractLangTemplate {
 
     @Override
     public String getSenderAndFrom() {
-        return "от";
+        return "от: %s %s";
     }
 
     @Override
@@ -24,72 +24,72 @@ public class RusLangTemplate extends AbstractLangTemplate {
 
     @Override
     public String getReceiver() {
-        return "Кому";
+        return "  Кому: %s";
     }
 
     @Override
     public String getAddress() {
-        return "Куда";
+        return "  Куда: %s %s %s %s";
     }
 
     @Override
     public String getSud() {
-        return "Суд";
+        return "  Суд: %s";
     }
 
     @Override
     public String getCallYou() {
-        return "вызывает Вас по адресу";
+        return "  вызывает Вас по адресу: %s";
     }
 
     @Override
     public String getTo() {
-        return "на";
+        return "  на: %s";
     }
 
     @Override
     public String getDeal() {
-        return "по делу";
+        return "  по делу: %s";
     }
 
     @Override
     public String getAs() {
-        return "в качестве";
+        return "  в качестве: %s";
     }
 
     @Override
     public String getDemandOne() {
-        return "Лицо, принявшее повестку, обязано при первой возможности вручить её адресату.\n   Уклонение без уважительных причин участников процесса и иных лиц от явки в суд влечет административную ответственность (ст.513 КоАП).\n";
+        return "   Лицо, принявшее повестку, обязано при первой возможности вручить её адресату.\n   Уклонение без уважительных причин участников процесса и иных лиц от явки в суд влечет административную ответственность (ст.513 КоАП).\n";
     }
 
     @Override
     public String getDemandTwo() {
-        return "При себе иметь документ, удостоверяющий личность.";
+        return "   При себе иметь документ, удостоверяющий личность.";
     }
 
     @Override
     public String getSecretary() {
-        return "Секретарь судебного заседания";
+        return "     Секретарь судебного заседания: %s";
     }
 
     @Override
     public String getPhoneNumber() {
-        return "Телефон";
+        return "     Телефон: %s";
     }
 
     @Override
     public String getOfficePhoneNumber() {
-        return "Телефон заведующего канцелярии";
+        return "     Телефон заведующего канцелярии: %s";
     }
 
     @Override
     public String getJudge() {
-        return "Судья";
+        return "     Судья: %s";
     }
 
     @Override
     public String getDescription() {
-        return "На сайте Верховного Суда www.sud.gov.kz для граждан и юридических лиц реализованы:\n" +
+        return "       На сайте Верховного Суда www.sud.gov.kz для граждан и юридических лиц реализованы:\n" +
                 "- возможность подачи обращения, заявления (жалобы) и ходатайства в онлайн режиме через электронный сервис «Судебный кабинет»;\n" +
                 "- ознакомление с судебными документами в электронном сервисе «Ознакомление с судебными документами»;\n" +
                 "- ознакомление со списком слушаний судебных дел;\n" +
@@ -99,7 +99,7 @@ public class RusLangTemplate extends AbstractLangTemplate {
 
     @Override
     public String getText1() {
-        return "Контакт-Центр ВС:";
+        return "Контакт-Центр ВС: ";
     }
 
     @Override
