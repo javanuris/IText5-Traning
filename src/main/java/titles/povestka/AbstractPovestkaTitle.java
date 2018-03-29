@@ -150,9 +150,9 @@ public abstract class AbstractPovestkaTitle extends AbstractTitle {
 
     protected abstract void setQRCode(PdfWriter writer, Form103 form103);
 
-    protected void getQRCode(PdfWriter writer, Form103 form103) {
-        if (form103.getF16() != null) {
-            Image image = createQRCode(form103.getF16(), 30f, 32f, 85f, 85f);
+    protected void getQRCode(PdfWriter writer, String text) {
+        if (text != null) {
+            Image image = createQRCode(text, 30f, 32f, 85f, 85f);
             try {
                 writer.getDirectContent().addImage(image);
             } catch (DocumentException e) {

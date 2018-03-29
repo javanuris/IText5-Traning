@@ -121,6 +121,14 @@ public abstract class AbstractTitle implements Title {
         return pdfPCell;
     }
 
+    public PdfPCell getPdfPCellParagraph(Phrase phrase) {
+        PdfPCell pdfPCell = new PdfPCell();
+        pdfPCell.addElement(phrase);
+        pdfPCell.setPadding(0);
+        pdfPCell.setBorder(0);
+        return pdfPCell;
+    }
+
     public void setTablePosition(PdfWriter writer, PdfPTable table, float xPos, float yPos) {
         final int FIRST_ROW = 0;
         final int LAST_ROW = -1;

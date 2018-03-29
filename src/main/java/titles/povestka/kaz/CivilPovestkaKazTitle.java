@@ -8,6 +8,7 @@ import dto.Form103;
 import titles.povestka.AbstractPovestkaKazTitle;
 import utils.FontUtil;
 
+//id_type_doc = 1, id_subtype_doc = 2, lang = 2;
 public class CivilPovestkaKazTitle extends AbstractPovestkaKazTitle {
     @Override
     protected void setDemandThree(PdfPTable table) {

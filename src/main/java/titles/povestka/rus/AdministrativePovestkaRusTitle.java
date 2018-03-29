@@ -8,6 +8,7 @@ import dto.Form103;
 import titles.povestka.AbstractPovestkaRusTitle;
 import utils.FontUtil;
 
+//id_type_doc = 1, id_subtype_doc = 1, lang = 1;
 public class AdministrativePovestkaRusTitle extends AbstractPovestkaRusTitle {
     @Override
     protected void setDemandThree(PdfPTable table) {
@@ -18,7 +19,7 @@ public class AdministrativePovestkaRusTitle extends AbstractPovestkaRusTitle {
 
     @Override
     protected void setQRCode(PdfWriter writer, Form103 form103) {
-        getQRCode(writer, form103);
+        getQRCode(writer, form103.getF16());
 
     }
 }

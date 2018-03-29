@@ -4,7 +4,7 @@ import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
 import dto.Form103;
 
-//Id type doc 18
+//id_type_doc = 18
 public class LegalPostTitle extends AbstractPostTitle {
 
     @Override

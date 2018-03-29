@@ -8,7 +8,7 @@ import com.itextpdf.text.pdf.PdfWriter;
 import dto.Form103;
 import utils.FontUtil;
 
-//Id type doc 19
+//id_type_doc = 19
 public class DVDAstanaPostTitle extends AbstractPostTitle {
 
     @Override
