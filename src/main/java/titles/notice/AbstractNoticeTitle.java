@@ -57,7 +57,7 @@ public abstract class AbstractNoticeTitle extends AbstractTitle {
         String povestkaStr = String.format(templ().getPovestka());
         Phrase povestka = new Phrase(povestkaStr, FontUtil.openSansBold(15));
         PdfPCell povestkaCell = getPdfPCell(povestka);
-        povestkaCell.setPaddingLeft(152f);
+        povestkaCell.setPaddingLeft(162f);
         table.addCell(povestkaCell);
 
         String receiverStr = String.format(templ().getReceiver(), form103.getF1());
@@ -88,7 +88,7 @@ public abstract class AbstractNoticeTitle extends AbstractTitle {
 
     protected void getQRCode(PdfWriter writer, String text) {
         if (text != null) {
-            Image image = createQRCode(text, 30f, 32f, 85f, 85f);
+            Image image = createQRCode(text, 33f, 32f, 85f, 85f);
             try {
                 writer.getDirectContent().addImage(image);
             } catch (DocumentException e) {

@@ -10,11 +10,12 @@ import utils.FontUtil;
 
 //id 6
 public class CivilControlNoticeKazTitle extends AbstractNoticeKazTitle {
+
     protected void setBodyDescriptionBeforePovestka(PdfPTable table) {
         String additionalTextStr = String.format("(Азаматтық іс бойынша қадағалау сот сатысының отырысына шақырту)");
         Phrase additionalText = new Phrase(additionalTextStr, FontUtil.openSansBold(10));
         PdfPCell additionalTextCell = getPdfPCell(additionalText);
-        additionalTextCell.setPaddingLeft(20f);
+        additionalTextCell.setPaddingLeft(35f);
         table.addCell(additionalTextCell);
     }
 
