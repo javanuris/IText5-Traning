@@ -135,4 +135,18 @@ public abstract class AbstractTitle implements Title {
         PdfContentByte contentByte = writer.getDirectContent();
         table.writeSelectedRows(FIRST_ROW, LAST_ROW, xPos, yPos, contentByte);
     }
+
+    protected void addCell(PdfPTable table, Phrase phrase, float paddingTop) {
+        PdfPCell toCell = getPdfPCell(phrase);
+        toCell.setPaddingTop(paddingTop);
+        table.addCell(toCell);
+    }
+
+    protected void addCellParagraph(PdfPTable table, Phrase text, float paddingTop) {
+        Paragraph paragraph = new Paragraph(text);
+        paragraph.setLeading(12);
+        PdfPCell toCell = getPdfPCellParagraph(paragraph);
+        toCell.setPaddingTop(paddingTop);
+        table.addCell(toCell);
+    }
 }

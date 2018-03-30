@@ -1,4 +1,4 @@
-package titles.povestka;
+package titles.notice;
 
 import com.itextpdf.text.*;
 import com.itextpdf.text.pdf.BarcodeQRCode;
@@ -7,14 +7,11 @@ import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
 import dto.Form103;
 import titles.AbstractTitle;
-import titles.povestka.lang.AbstractLangTemplate;
+import titles.notice.lang.AbstractLangTemplate;
 import utils.FontUtil;
 import utils.ImageUtil;
 
-
-public abstract class AbstractPovestkaTitle extends AbstractTitle {
-
-
+public abstract class AbstractNoticeTitle extends AbstractTitle {
     protected abstract AbstractLangTemplate templ();
 
     @Override
@@ -26,12 +23,9 @@ public abstract class AbstractPovestkaTitle extends AbstractTitle {
             e.printStackTrace();
         }
 
-        Phrase sudPovestka = new Phrase(templ().getSudPovestka(), FontUtil.openSansBold(7));
+        String sudPovestkaStr = String.format(templ().getSudPovestka());
+        Phrase sudPovestka = new Phrase(sudPovestkaStr, FontUtil.openSansBold(7));
         addCell(table, sudPovestka, 10);
-
-        String senderAndFromStr = String.format(templ().getSenderAndFrom(), form103.getF6(), form103.getF10());
-        Phrase senderAndFrom = new Phrase(senderAndFromStr, FontUtil.openSansRegular(7));
-        addCell(table, senderAndFrom, 1);
 
         Phrase f1 = new Phrase(form103.getF1().toUpperCase(), FontUtil.openSansBold(8));
         addCell(table, f1, 3);
@@ -56,12 +50,14 @@ public abstract class AbstractPovestkaTitle extends AbstractTitle {
     @Override
     public void createBody(PdfWriter writer, Form103 form103) {
         PdfPTable table = new PdfPTable(1);
-        table.setTotalWidth(490);
+        table.setTotalWidth(470);
+
+        setBodyDescriptionBeforePovestka(table);
 
         String povestkaStr = String.format(templ().getPovestka());
         Phrase povestka = new Phrase(povestkaStr, FontUtil.openSansBold(15));
         PdfPCell povestkaCell = getPdfPCell(povestka);
-        povestkaCell.setPaddingLeft(106f);
+        povestkaCell.setPaddingLeft(152f);
         table.addCell(povestkaCell);
 
         String receiverStr = String.format(templ().getReceiver(), form103.getF1());
@@ -72,83 +68,23 @@ public abstract class AbstractPovestkaTitle extends AbstractTitle {
         Phrase address = new Phrase(addressStr, FontUtil.openSansLight(10));
         addCell(table, address, 2);
 
-        String sudStr = String.format(templ().getSud(), form103.getF6());
-        Phrase sud = new Phrase(sudStr, FontUtil.openSansLight(10));
-        addCell(table, sud, 10f);
+        setBodyAdditionalInfo(table, form103);
 
-        String callYouStr = String.format(templ().getCallYou(), form103.getF10());
-        Phrase callYou = new Phrase(callYouStr, FontUtil.openSansLight(10));
-        addCell(table, callYou, 2);
-
-        String toStr = String.format(templ().getTo(), form103.getF7());
-        Phrase to = new Phrase(toStr, FontUtil.openSansLight(10));
-        addCell(table, to, 2);
-
-        String dealStr = String.format(templ().getDeal(), form103.getF8());
-        Phrase deal = new Phrase(dealStr, FontUtil.openSansLight(10));
-        addCell(table, deal, 2);
-
-        String asStr = String.format(templ().getAs(), form103.getF9());
-        Phrase as = new Phrase(asStr, FontUtil.openSansLight(10));
-        PdfPCell asCell = getPdfPCell(as);
-        asCell.setPaddingTop(2f);
-        asCell.setPaddingBottom(10f);
-        table.addCell(asCell);
-
-        setDemandThree(table);
-
-        String demandOneStr = String.format(templ().getDemandOne());
-        Phrase demandOne = new Phrase(demandOneStr, FontUtil.openSansRegular(10));
-        addCell(table, demandOne, 1);
-
-        String demandTwoStr = String.format(templ().getDemandTwo());
-        Phrase demandTwo = new Phrase(demandTwoStr, FontUtil.openSansRegular(10));
-        addCell(table, demandTwo, 2);
-
-        String secretaryStr = String.format(templ().getSecretary(), form103.getF13());
-        Phrase secretary = new Phrase(secretaryStr, FontUtil.openSansLight(10));
-        addCell(table, secretary, 10);
-
-        String phoneNumberStr = String.format(templ().getPhoneNumber(), form103.getF12());
-        Phrase phoneNumber = new Phrase(phoneNumberStr, FontUtil.openSansLight(10));
-        addCell(table, phoneNumber, 1);
-
-        String officePhoneNumberStr = String.format(templ().getOfficePhoneNumber(), form103.getF19());
-        Phrase officePhoneNumber = new Phrase(officePhoneNumberStr, FontUtil.openSansLight(10));
-        addCell(table, officePhoneNumber, 1);
-
-        if (form103.getF18() != null) {
-            String judgeStr = String.format(templ().getJudge(), form103.getF18().toUpperCase());
-            Phrase judge = new Phrase(judgeStr, FontUtil.openSansLight(10));
-            addCell(table, judge, 1);
-
-        }
         setTablePosition(writer, table, 57f, 594f);
     }
 
+    protected abstract void setBodyDescriptionBeforePovestka(PdfPTable table);
 
-    protected abstract void setDemandThree(PdfPTable table);
+    protected abstract void setBodyAdditionalInfo(PdfPTable table, Form103 form103);
 
-    @Override
-    public void createFooter(PdfWriter writer, Form103 form103) {
-        setQRCode(writer, form103);
-
-        PdfPTable table = new PdfPTable(1);
-        table.setTotalWidth(490);
-
-        String descriptionStr = String.format(templ().getDescription());
-        Phrase description = new Phrase(descriptionStr, FontUtil.openSansBold(8));
-        description.setLeading(10);
-        addCell(table, description, 1);
-
-        setTablePosition(writer, table, 57f, 182f);
-
-        gepContacts(writer);
-        gepCopyright(writer);
-
+    private Image createSudImage() {
+        Image image = ImageUtil.getLogoSud();
+        image.setAbsolutePosition(44f, 720f);
+        image.scaleAbsolute(151f, 100f);
+        return image;
     }
 
-    protected abstract void setQRCode(PdfWriter writer, Form103 form103);
+    protected abstract void setQRCode(PdfWriter writer, String text);
 
     protected void getQRCode(PdfWriter writer, String text) {
         if (text != null) {
@@ -159,7 +95,6 @@ public abstract class AbstractPovestkaTitle extends AbstractTitle {
                 e.printStackTrace();
             }
         }
-
     }
 
     private Image createQRCode(String text, float xPos, float yPos, float width, float height) {
@@ -175,7 +110,7 @@ public abstract class AbstractPovestkaTitle extends AbstractTitle {
         return codeQrImage;
     }
 
-    private void gepContacts(PdfWriter writer) {
+    protected void gepContacts(PdfWriter writer) {
         PdfPTable table = new PdfPTable(1);
         table.setTotalWidth(150);
 
@@ -194,7 +129,7 @@ public abstract class AbstractPovestkaTitle extends AbstractTitle {
         setTablePosition(writer, table, 110f, 79f);
     }
 
-    private void gepCopyright(PdfWriter writer) {
+    protected void gepCopyright(PdfWriter writer) {
         PdfPTable table = new PdfPTable(1);
         table.setTotalWidth(490);
         Font font = FontUtil.openSansLight(6);
@@ -207,11 +142,20 @@ public abstract class AbstractPovestkaTitle extends AbstractTitle {
         setTablePosition(writer, table, 165f, 32f);
     }
 
-    private Image createSudImage() {
-        Image image = ImageUtil.getLogoSud();
-        image.setAbsolutePosition(44f, 720f);
-        image.scaleAbsolute(151f, 100f);
-        return image;
+    @Override
+    public void createFooter(PdfWriter writer, Form103 form103) {
+        setQRCode(writer, form103.getF16());
+
+        PdfPTable table = new PdfPTable(1);
+        table.setTotalWidth(490f);
+
+        createFooterAdditionalInfo(table, form103);
+
+        setTablePosition(writer, table, 64f, 210f);
+        gepContacts(writer);
+        gepCopyright(writer);
     }
+
+    protected abstract void createFooterAdditionalInfo(PdfPTable table, Form103 form103);
 
 }
