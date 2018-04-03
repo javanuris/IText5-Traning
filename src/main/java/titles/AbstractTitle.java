@@ -53,19 +53,21 @@ public abstract class AbstractTitle implements Title {
 
         createHeaderMiddle(writer, table, form103);
 
-        Phrase barcodeInCode = createBarcodeInCode(form103.getBarcode());
-        PdfPCell headerBarcodeCell = getPdfPCell(barcodeInCode);
-        table.addCell(headerBarcodeCell);
+        if (form103.getBarcode() != null) {
+            Phrase barcodeInCode = createBarcodeInCode(form103.getBarcode());
+            PdfPCell headerBarcodeCell = getPdfPCell(barcodeInCode);
+            table.addCell(headerBarcodeCell);
 
-        Phrase shpi = createSHPI();
-        PdfPCell shpiCell = getPdfPCell(shpi);
-        shpiCell.setPaddingTop(1);
-        table.addCell(shpi);
+            Phrase shpi = createSHPI();
+            PdfPCell shpiCell = getPdfPCell(shpi);
+            shpiCell.setPaddingTop(1);
+            table.addCell(shpi);
 
-        Phrase barcodeInText = createBarcodeInText(form103.getBarcode());
-        PdfPCell barcodeInTextCell = getPdfPCell(barcodeInText);
-        barcodeInTextCell.setPaddingLeft(45);
-        table.addCell(barcodeInTextCell);
+            Phrase barcodeInText = createBarcodeInText(form103.getBarcode());
+            PdfPCell barcodeInTextCell = getPdfPCell(barcodeInText);
+            barcodeInTextCell.setPaddingLeft(45);
+            table.addCell(barcodeInTextCell);
+        }
 
         setTablePosition(writer, table, HEADER_X, HEADER_Y);
     }
@@ -114,20 +116,6 @@ public abstract class AbstractTitle implements Title {
         return new Phrase(text, FontUtil.helvetica(7));
     }
 
-    public PdfPCell getPdfPCell(Phrase phrase) {
-        PdfPCell pdfPCell = new PdfPCell(phrase);
-        pdfPCell.setPadding(0);
-        pdfPCell.setBorder(0);
-        return pdfPCell;
-    }
-
-    public PdfPCell getPdfPCellParagraph(Phrase phrase) {
-        PdfPCell pdfPCell = new PdfPCell();
-        pdfPCell.addElement(phrase);
-        pdfPCell.setPadding(0);
-        pdfPCell.setBorder(0);
-        return pdfPCell;
-    }
 
     public void setTablePosition(PdfWriter writer, PdfPTable table, float xPos, float yPos) {
         final int FIRST_ROW = 0;
@@ -142,11 +130,26 @@ public abstract class AbstractTitle implements Title {
         table.addCell(toCell);
     }
 
+    public PdfPCell getPdfPCell(Phrase phrase) {
+        PdfPCell pdfPCell = new PdfPCell(phrase);
+        pdfPCell.setPadding(0);
+        pdfPCell.setBorder(0);
+        return pdfPCell;
+    }
+
     protected void addCellParagraph(PdfPTable table, Phrase text, float paddingTop) {
         Paragraph paragraph = new Paragraph(text);
         paragraph.setLeading(12);
         PdfPCell toCell = getPdfPCellParagraph(paragraph);
         toCell.setPaddingTop(paddingTop);
         table.addCell(toCell);
+    }
+
+    private PdfPCell getPdfPCellParagraph(Phrase phrase) {
+        PdfPCell pdfPCell = new PdfPCell();
+        pdfPCell.addElement(phrase);
+        pdfPCell.setPadding(0);
+        pdfPCell.setBorder(0);
+        return pdfPCell;
     }
 }

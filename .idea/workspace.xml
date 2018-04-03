@@ -2,12 +2,86 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="faa2b0ef-7213-481d-862b-edd709b0edd6" name="Default" comment="">
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/titles/single/notice/kaz/CivilControlNoticeKazTitle.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/titles/single/notice/kaz/CivilPreviouslyNoticeKazTitle.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/titles/single/notice/kaz/CriminalControlNoticeKazTitle.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/titles/single/notice/kaz/CriminalFilingCaseNoticeKazTitle.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/titles/single/notice/kaz/CriminalPreviouslyNoticeKazTitle.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/titles/single/notice/kaz/CriminalRefusalNoticeKazTitle.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/titles/single/notice/rus/CivilControlNoticeRusTitle.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/titles/single/notice/rus/CivilPreviouslyNoticeRusTitle.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/titles/single/notice/rus/CriminalControlNoticeRusTitle.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/titles/single/notice/rus/CriminalPreviouslyNoticeRusTitle.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/src/main/java/titles/single/notice/rus/CriminalRefusalNoticeRusTitle.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change beforePath="$PROJECT_DIR$/src/main/java/Main.java" afterPath="$PROJECT_DIR$/src/main/java/Main.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/titles/notice/AbstractNoticeTitle.java" afterPath="$PROJECT_DIR$/src/main/java/titles/notice/AbstractNoticeTitle.java" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/titles/notice/kaz/CivilControlNoticeKazTitle.java" afterPath="$PROJECT_DIR$/src/main/java/titles/notice/kaz/CivilControlNoticeKazTitle.java" />
-      <change beforePath="$PROJECT_DIR$/target/classes/titles/notice/kaz/CivilControlNoticeKazTitle.class" afterPath="$PROJECT_DIR$/target/classes/titles/notice/kaz/CivilControlNoticeKazTitle.class" />
-      <change beforePath="$PROJECT_DIR$/target/classes/titles/notice/kaz/CivilPreviouslyNoticeKazTitle.class" afterPath="$PROJECT_DIR$/target/classes/titles/notice/kaz/CivilPreviouslyNoticeKazTitle.class" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/f119/F119GenerateOnePage.java" afterPath="$PROJECT_DIR$/src/main/java/f119/F119GenerateOnePage.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/titles/AbstractTitle.java" afterPath="$PROJECT_DIR$/src/main/java/titles/AbstractTitle.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/titles/notice/AbstractNoticeKazTitle.java" afterPath="$PROJECT_DIR$/src/main/java/titles/single/notice/AbstractNoticeKazTitle.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/titles/notice/AbstractNoticeRusTitle.java" afterPath="$PROJECT_DIR$/src/main/java/titles/single/notice/AbstractNoticeRusTitle.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/titles/notice/AbstractNoticeTitle.java" afterPath="$PROJECT_DIR$/src/main/java/titles/single/notice/AbstractNoticeTitle.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/titles/notice/kaz/CivilControlNoticeKazTitle.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/titles/notice/kaz/CivilPreviouslyNoticeKazTitle.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/titles/notice/kaz/CriminalControlNoticeKazTitle.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/titles/notice/kaz/CriminalFilingCaseNoticeKazTitle.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/titles/notice/kaz/CriminalPreviouslyNoticeKazTitle.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/titles/notice/kaz/CriminalRefusalNoticeKazTitle.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/titles/notice/lang/AbstractLangTemplate.java" afterPath="$PROJECT_DIR$/src/main/java/titles/single/notice/lang/AbstractLangTemplate.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/titles/notice/lang/KazLangTemplate.java" afterPath="$PROJECT_DIR$/src/main/java/titles/single/notice/lang/KazLangTemplate.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/titles/notice/lang/RusLangTemplate.java" afterPath="$PROJECT_DIR$/src/main/java/titles/single/notice/lang/RusLangTemplate.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/titles/notice/rus/CivilControlNoticeRusTitle.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/titles/notice/rus/CivilPreviouslyNoticeRusTitle.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/titles/notice/rus/CriminalControlNoticeRusTitle.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/titles/notice/rus/CriminalFilingCaseNoticeRusTitle.java" afterPath="$PROJECT_DIR$/src/main/java/titles/single/notice/rus/CriminalFilingCaseNoticeRusTitle.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/titles/notice/rus/CriminalPreviouslyNoticeRusTitle.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/titles/notice/rus/CriminalRefusalNoticeRusTitle.java" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/titles/postkz/AbstractPostTitle.java" afterPath="$PROJECT_DIR$/src/main/java/titles/common/AbstractPostTitle.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/titles/postkz/DVDAstanaPostTitle.java" afterPath="$PROJECT_DIR$/src/main/java/titles/common/DVDAstanaPostTitle.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/titles/postkz/LegalPostTitle.java" afterPath="$PROJECT_DIR$/src/main/java/titles/common/LegalPostTitle.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/titles/povestka/AbstractPovestkaKazTitle.java" afterPath="$PROJECT_DIR$/src/main/java/titles/single/povestka/AbstractPovestkaKazTitle.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/titles/povestka/AbstractPovestkaRusTitle.java" afterPath="$PROJECT_DIR$/src/main/java/titles/single/povestka/AbstractPovestkaRusTitle.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/titles/povestka/AbstractPovestkaTitle.java" afterPath="$PROJECT_DIR$/src/main/java/titles/single/povestka/AbstractPovestkaTitle.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/titles/povestka/kaz/AdministrativePovestkaKazTitle.java" afterPath="$PROJECT_DIR$/src/main/java/titles/single/povestka/kaz/AdministrativePovestkaKazTitle.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/titles/povestka/kaz/CivilPovestkaKazTitle.java" afterPath="$PROJECT_DIR$/src/main/java/titles/single/povestka/kaz/CivilPovestkaKazTitle.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/titles/povestka/kaz/CriminalPovestkaKazTitle.java" afterPath="$PROJECT_DIR$/src/main/java/titles/single/povestka/kaz/CriminalPovestkaKazTitle.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/titles/povestka/lang/AbstractLangTemplate.java" afterPath="$PROJECT_DIR$/src/main/java/titles/single/povestka/lang/AbstractLangTemplate.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/titles/povestka/lang/KazLangTemplate.java" afterPath="$PROJECT_DIR$/src/main/java/titles/single/povestka/lang/KazLangTemplate.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/titles/povestka/lang/RusLangTemplate.java" afterPath="$PROJECT_DIR$/src/main/java/titles/single/povestka/lang/RusLangTemplate.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/titles/povestka/rus/AdministrativePovestkaRusTitle.java" afterPath="$PROJECT_DIR$/src/main/java/titles/single/povestka/rus/AdministrativePovestkaRusTitle.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/titles/povestka/rus/CivilPovestkaRusTitle.java" afterPath="$PROJECT_DIR$/src/main/java/titles/single/povestka/rus/CivilPovestkaRusTitle.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/titles/povestka/rus/CriminalPovestkaRusTitle.java" afterPath="$PROJECT_DIR$/src/main/java/titles/single/povestka/rus/CriminalPovestkaRusTitle.java" />
+      <change beforePath="$PROJECT_DIR$/target/classes/Main.class" afterPath="$PROJECT_DIR$/target/classes/Main.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/titles/AbstractTitle.class" afterPath="$PROJECT_DIR$/target/classes/titles/AbstractTitle.class" />
+      <change beforePath="$PROJECT_DIR$/target/classes/titles/notice/AbstractNoticeKazTitle.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/titles/notice/AbstractNoticeRusTitle.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/titles/notice/AbstractNoticeTitle.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/titles/notice/kaz/CivilControlNoticeKazTitle.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/titles/notice/kaz/CivilPreviouslyNoticeKazTitle.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/titles/notice/kaz/CriminalControlNoticeKazTitle.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/titles/notice/kaz/CriminalFilingCaseNoticeKazTitle.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/titles/notice/kaz/CriminalPreviouslyNoticeKazTitle.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/titles/notice/kaz/CriminalRefusalNoticeKazTitle.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/titles/notice/lang/AbstractLangTemplate.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/titles/notice/lang/KazLangTemplate.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/titles/notice/lang/RusLangTemplate.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/titles/notice/rus/CivilControlNoticeRusTitle.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/titles/notice/rus/CivilPreviouslyNoticeRusTitle.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/titles/notice/rus/CriminalControlNoticeRusTitle.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/titles/notice/rus/CriminalFilingCaseNoticeRusTitle.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/titles/notice/rus/CriminalPreviouslyNoticeRusTitle.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/titles/notice/rus/CriminalRefusalNoticeRusTitle.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/titles/povestka/AbstractPovestkaKazTitle.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/titles/povestka/AbstractPovestkaRusTitle.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/titles/povestka/AbstractPovestkaTitle.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/titles/povestka/kaz/AdministrativePovestkaKazTitle.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/titles/povestka/kaz/CivilPovestkaKazTitle.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/titles/povestka/kaz/CriminalPovestkaKazTitle.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/titles/povestka/lang/AbstractLangTemplate.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/titles/povestka/lang/KazLangTemplate.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/titles/povestka/lang/RusLangTemplate.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/titles/povestka/rus/AdministrativePovestkaRusTitle.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/titles/povestka/rus/CivilPovestkaRusTitle.class" afterPath="" />
+      <change beforePath="$PROJECT_DIR$/target/classes/titles/povestka/rus/CriminalPovestkaRusTitle.class" afterPath="" />
     </list>
     <list id="fc016d9a-d57d-47e6-ba26-246919da54c8" name="It was added Notice title" comment="It was added Notice title&#10;&#10;(cherry picked from commit a8f7037)">
       <changelist_data name="Каленов Нурислам Темирович" email="n.kalenov@kazpost.kz" date="1522314230000">
@@ -27,136 +101,105 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="CriminalFilingCaseNoticeRusTitle.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/titles/notice/rus/CriminalFilingCaseNoticeRusTitle.java">
+      <file leaf-file-name="DVDAstanaPostTitle.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/titles/common/DVDAstanaPostTitle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="187">
-              <caret line="11" column="45" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="45" />
+            <state relative-caret-position="102">
+              <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CivilPreviouslyNoticeRusTitle.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/titles/single/notice/rus/CivilPreviouslyNoticeRusTitle.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="220">
+              <caret line="66" column="21" lean-forward="false" selection-start-line="66" selection-start-column="8" selection-end-line="66" selection-end-column="21" />
               <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2518#2519#0" expanded="true" />
-                <element signature="e#2557#2558#0" expanded="true" />
+                <element signature="e#4252#4253#0" expanded="true" />
+                <element signature="e#4291#4292#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="CriminalRefusalNoticeRusTitle.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/titles/notice/rus/CriminalRefusalNoticeRusTitle.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/titles/single/notice/rus/CriminalRefusalNoticeRusTitle.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="981">
-              <caret line="58" column="0" lean-forward="true" selection-start-line="13" selection-start-column="3" selection-end-line="58" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#3546#3547#0" expanded="true" />
-                <element signature="e#3594#3595#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CivilPreviouslyNoticeRusTitle.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/titles/notice/rus/CivilPreviouslyNoticeRusTitle.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="340">
-              <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#4929#4930#0" expanded="true" />
-                <element signature="e#4968#4969#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="AbstractNoticeTitle.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/titles/notice/AbstractNoticeTitle.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="131">
-              <caret line="90" column="47" lean-forward="false" selection-start-line="90" selection-start-column="47" selection-end-line="90" selection-end-column="47" />
-              <folding>
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CivilControlNoticeRusTitle.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/titles/notice/rus/CivilControlNoticeRusTitle.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="468">
-              <caret line="31" column="27" lean-forward="true" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#6510#6511#0" expanded="true" />
-                <element signature="e#6549#6550#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CriminalControlNoticeRusTitle.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/titles/notice/rus/CriminalControlNoticeRusTitle.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="386">
-              <caret line="63" column="0" lean-forward="true" selection-start-line="13" selection-start-column="3" selection-end-line="63" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#3313#3314#0" expanded="true" />
-                <element signature="e#3352#3353#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CriminalControlNoticeKazTitle.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/titles/notice/kaz/CriminalControlNoticeKazTitle.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="44" lean-forward="false" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#3276#3277#0" expanded="true" />
-                <element signature="e#3315#3316#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="CriminalFilingCaseNoticeKazTitle.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/titles/notice/kaz/CriminalFilingCaseNoticeKazTitle.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="301">
-              <caret line="50" column="0" lean-forward="true" selection-start-line="46" selection-start-column="7" selection-end-line="50" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#2535#2536#0" expanded="true" />
-                <element signature="e#2574#2575#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Main.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="170">
-              <caret line="15" column="43" lean-forward="false" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
+            <state relative-caret-position="544">
+              <caret line="38" column="25" lean-forward="false" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CriminalPreviouslyNoticeRusTitle.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/titles/notice/rus/CriminalPreviouslyNoticeRusTitle.java">
+      <file leaf-file-name="UsualF119Generator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/f119/UsualF119Generator.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="57" column="0" lean-forward="true" selection-start-line="53" selection-start-column="3" selection-end-line="57" selection-end-column="0" />
-              <folding>
-                <element signature="imports" expanded="true" />
-                <element signature="e#3166#3167#0" expanded="true" />
-                <element signature="e#3205#3206#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="85">
+              <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="F119Generator.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/f119/F119Generator.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="F119GenerateOnePage.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/f119/F119GenerateOnePage.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-186">
+              <caret line="94" column="75" lean-forward="false" selection-start-line="94" selection-start-column="68" selection-end-line="94" selection-end-column="75" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Main.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="17">
+              <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="LegalPostTitle.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/titles/common/LegalPostTitle.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="85">
+              <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="GPTitle.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../gep_core/src/main/java/kazpost/gep/core/services/generators/titles/common/GPTitle.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="NurOtanTitle.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/../gep_core/src/main/java/kazpost/gep/core/services/generators/titles/common/NurOtanTitle.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="51">
+              <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -193,18 +236,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/main/java/qr_code/QRGenerator.java" />
-        <option value="$PROJECT_DIR$/src/main/java/dao/Form103Dao.java" />
-        <option value="$PROJECT_DIR$/src/main/java/titles/povestka/PovestkaTitle.java" />
-        <option value="$PROJECT_DIR$/src/main/java/titles/povestka/CivilPovestkaTitle.java" />
-        <option value="$PROJECT_DIR$/src/main/java/titles/povestka/AdministrativePovestkaTitle.java" />
-        <option value="$PROJECT_DIR$/src/main/java/titles/povestka/lang/AbstractLang.java" />
-        <option value="$PROJECT_DIR$/src/main/java/titles/povestka/lang/RusLang.java" />
-        <option value="$PROJECT_DIR$/src/main/java/titles/povestka/CriminalPovestkaTitle.java" />
-        <option value="$PROJECT_DIR$/src/main/java/titles/povestka/rus/CriminalPovestkaTitle.java" />
-        <option value="$PROJECT_DIR$/src/main/java/titles/povestka/kaz/AbstractPovestkaKazTitle.java" />
-        <option value="$PROJECT_DIR$/src/main/java/titles/povestka/rus/AbstractPovestkaTitle.java" />
-        <option value="$PROJECT_DIR$/src/main/java/titles/povestka/rus/AbstractPovestkaRusTitle.java" />
         <option value="$PROJECT_DIR$/src/main/java/titles/povestka/rus/AdministrativePovestkaTitle.java" />
         <option value="$PROJECT_DIR$/src/main/java/titles/povestka/AbstractPovestkaRusTitle.java" />
         <option value="$PROJECT_DIR$/src/main/java/titles/povestka/AbstractPovestkaKazTitle.java" />
@@ -220,30 +251,42 @@
         <option value="$PROJECT_DIR$/src/main/java/titles/povestka/kaz/CivilPovestkaKazTitle.java" />
         <option value="$PROJECT_DIR$/src/main/java/titles/povestka/kaz/AdministrativePovestkaKazTitle.java" />
         <option value="$PROJECT_DIR$/src/main/java/titles/AbstractSingleTitle.java" />
-        <option value="$PROJECT_DIR$/src/main/java/titles/AbstractTitle.java" />
         <option value="$PROJECT_DIR$/src/main/java/titles/povestka/AbstractPovestkaTitle.java" />
         <option value="$PROJECT_DIR$/src/main/java/titles/notice/CriminalRefusalNoticeTitle.java" />
         <option value="$PROJECT_DIR$/src/main/java/titles/notice/lang/RusLangTemplate.java" />
-        <option value="$PROJECT_DIR$/src/main/java/titles/notice/lang/AbstractLangTemplate.java" />
         <option value="$PROJECT_DIR$/src/main/java/titles/notice/AbstractPovestkaRusTitle.java" />
         <option value="$PROJECT_DIR$/src/main/java/titles/notice/AbstractPovestkaKazTitle.java" />
         <option value="$PROJECT_DIR$/src/main/java/titles/notice/CriminalRefusalNoticeRusTitle.java" />
         <option value="$PROJECT_DIR$/src/main/java/titles/notice/lang/KazLangTemplate.java" />
-        <option value="$PROJECT_DIR$/src/main/java/titles/notice/rus/CivilPreviouslyNoticeRusTitle.java" />
-        <option value="$PROJECT_DIR$/src/main/java/titles/notice/rus/CriminalRefusalNoticeRusTitle.java" />
-        <option value="$PROJECT_DIR$/src/main/java/titles/notice/kaz/CriminalRefusalNoticeKazTitle.java" />
-        <option value="$PROJECT_DIR$/src/main/java/titles/notice/rus/CivilControlNoticeRusTitle.java" />
-        <option value="$PROJECT_DIR$/src/main/java/titles/notice/kaz/CivilPreviouslyNoticeKazTitle.java" />
-        <option value="$PROJECT_DIR$/src/main/java/titles/notice/kaz/CriminalPreviouslyNoticeKazTitle.java" />
-        <option value="$PROJECT_DIR$/src/main/java/titles/notice/kaz/CivilControlNoticeKazTitle.java" />
-        <option value="$PROJECT_DIR$/src/main/java/titles/notice/rus/CriminalPreviouslyNoticeRusTitle.java" />
         <option value="$PROJECT_DIR$/src/main/java/titles/notice/kaz/CriminalFilingCaseKazTitle.java" />
         <option value="$PROJECT_DIR$/src/main/java/titles/notice/rus/CriminalFilingCaseRusTitle.java" />
-        <option value="$PROJECT_DIR$/src/main/java/titles/notice/AbstractNoticeTitle.java" />
         <option value="$PROJECT_DIR$/src/main/java/titles/notice/kaz/CriminalControlNoticeRusTitle.java" />
+        <option value="$PROJECT_DIR$/src/main/java/titles/notice/rus/CivilPreviouslyNoticeRusTitle.java" />
+        <option value="$PROJECT_DIR$/src/main/java/titles/notice/kaz/CriminalFilingCaseNoticeKazTitle.java" />
+        <option value="$PROJECT_DIR$/src/main/java/titles/notice/rus/CivilControlNoticeRusTitle.java" />
         <option value="$PROJECT_DIR$/src/main/java/titles/notice/rus/CriminalControlNoticeRusTitle.java" />
-        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
+        <option value="$PROJECT_DIR$/src/main/java/titles/notice/rus/CriminalFilingCaseNoticeRusTitle.java" />
+        <option value="$PROJECT_DIR$/src/main/java/titles/notice/rus/CriminalPreviouslyNoticeRusTitle.java" />
+        <option value="$PROJECT_DIR$/src/main/java/titles/notice/rus/CriminalRefusalNoticeRusTitle.java" />
+        <option value="$PROJECT_DIR$/src/main/java/titles/notice/kaz/CriminalRefusalNoticeKazTitle.java" />
+        <option value="$PROJECT_DIR$/src/main/java/titles/notice/kaz/CriminalPreviouslyNoticeKazTitle.java" />
         <option value="$PROJECT_DIR$/src/main/java/titles/notice/kaz/CriminalControlNoticeKazTitle.java" />
+        <option value="$PROJECT_DIR$/src/main/java/titles/notice/kaz/CivilPreviouslyNoticeKazTitle.java" />
+        <option value="$PROJECT_DIR$/src/main/java/titles/notice/kaz/CivilControlNoticeKazTitle.java" />
+        <option value="$PROJECT_DIR$/src/main/java/titles/notice/lang/AbstractLangTemplate.java" />
+        <option value="$PROJECT_DIR$/src/main/java/titles/notice/AbstractNoticeTitle.java" />
+        <option value="$PROJECT_DIR$/src/main/java/titles/NurOtanTitle.java" />
+        <option value="$PROJECT_DIR$/src/main/java/titles/VsTitle.java" />
+        <option value="$PROJECT_DIR$/src/main/java/titles/VSTitle.java" />
+        <option value="$PROJECT_DIR$/src/main/java/titles/GPTitle.java" />
+        <option value="$PROJECT_DIR$/src/main/java/titles/common/AbstractPostTitle.java" />
+        <option value="$PROJECT_DIR$/src/main/java/titles/common/NurOtanTitle.java" />
+        <option value="$PROJECT_DIR$/src/main/java/titles/common/VSTitle.java" />
+        <option value="$PROJECT_DIR$/src/main/java/titles/common/GPTitle.java" />
+        <option value="$PROJECT_DIR$/src/main/java/titles/AbstractTitle.java" />
+        <option value="$PROJECT_DIR$/src/main/java/titles/common/MailKzTitle.java" />
+        <option value="$PROJECT_DIR$/src/main/java/f119/F119GenerateOnePage.java" />
+        <option value="$PROJECT_DIR$/src/main/java/Main.java" />
       </list>
     </option>
   </component>
@@ -260,8 +303,8 @@
     </treeState>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-86" />
-    <option name="y" value="-24" />
+    <option name="x" value="2" />
+    <option name="y" value="-19" />
     <option name="width" value="1600" />
     <option name="height" value="789" />
   </component>
@@ -312,7 +355,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="dao" type="462c0819:PsiDirectoryNode" />
+              <item name="f119" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="itextTraning" type="b2602c69:ProjectViewProjectNode" />
@@ -329,6 +372,16 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="titles" type="462c0819:PsiDirectoryNode" />
+              <item name="single" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="itextTraning" type="b2602c69:ProjectViewProjectNode" />
+              <item name="itextTraning" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="titles" type="462c0819:PsiDirectoryNode" />
+              <item name="single" type="462c0819:PsiDirectoryNode" />
               <item name="notice" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -338,28 +391,24 @@
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
               <item name="titles" type="462c0819:PsiDirectoryNode" />
-              <item name="notice" type="462c0819:PsiDirectoryNode" />
-              <item name="kaz" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="itextTraning" type="b2602c69:ProjectViewProjectNode" />
-              <item name="itextTraning" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="titles" type="462c0819:PsiDirectoryNode" />
-              <item name="notice" type="462c0819:PsiDirectoryNode" />
-              <item name="lang" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="itextTraning" type="b2602c69:ProjectViewProjectNode" />
-              <item name="itextTraning" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="titles" type="462c0819:PsiDirectoryNode" />
+              <item name="single" type="462c0819:PsiDirectoryNode" />
               <item name="notice" type="462c0819:PsiDirectoryNode" />
               <item name="rus" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="itextTraning" type="b2602c69:ProjectViewProjectNode" />
+              <item name="itextTraning" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="itextTraning" type="b2602c69:ProjectViewProjectNode" />
+              <item name="itextTraning" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="462c0819:PsiDirectoryNode" />
+              <item name="resources" type="462c0819:PsiDirectoryNode" />
+              <item name="images" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -565,7 +614,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="336002000" />
+    <option name="totallyTimeSpent" value="356299000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -589,7 +638,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32969153" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.11559889" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18662953" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.13091922" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -698,148 +747,7 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/resources/images/logo_hybrid.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/images/logo_sud.png">
-      <provider selected="true" editor-type-id="images">
-        <state />
-      </provider>
-    </entry>
-    <entry file="jar://C:/Program Files/Java/jdk1.8.0_161/src.zip!/java/io/FileOutputStream.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="160" column="11" lean-forward="false" selection-start-line="160" selection-start-column="11" selection-end-line="160" selection-end-column="11" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/itextpdf/itextpdf/5.5.13/itextpdf-5.5.13.jar!/com/itextpdf/text/Image.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="48" column="22" lean-forward="false" selection-start-line="48" selection-start-column="22" selection-end-line="48" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="269">
-          <caret line="29" column="0" lean-forward="false" selection-start-line="29" selection-start-column="0" selection-end-line="29" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/qr_code/QRGenerator.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/utils/ImageUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="160">
-          <caret line="20" column="0" lean-forward="false" selection-start-line="20" selection-start-column="0" selection-end-line="30" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/dao/Form103Dao.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="296">
-          <caret line="19" column="26" lean-forward="false" selection-start-line="19" selection-start-column="26" selection-end-line="19" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/itextpdf/itextpdf/5.5.13/itextpdf-5.5.13.jar!/com/itextpdf/text/Paragraph.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="18" column="34" lean-forward="true" selection-start-line="18" selection-start-column="34" selection-end-line="18" selection-end-column="34" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/itextpdf/itextpdf/5.5.13/itextpdf-5.5.13.jar!/com/itextpdf/text/Phrase.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="102">
-          <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/itextpdf/itextpdf/5.5.13/itextpdf-5.5.13.jar!/com/itextpdf/text/pdf/PdfPCell.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="73" column="11" lean-forward="false" selection-start-line="73" selection-start-column="11" selection-end-line="73" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/titles/postkz/DVDAstanaPostTitle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="17" column="24" lean-forward="false" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/titles/postkz/LegalPostTitle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="6" column="2" lean-forward="false" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/titles/postkz/AbstractPostTitle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="391">
-          <caret line="48" column="27" lean-forward="true" selection-start-line="48" selection-start-column="27" selection-end-line="48" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/com/itextpdf/itextpdf/5.5.13/itextpdf-5.5.13.jar!/com/itextpdf/text/pdf/PdfPTable.class">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="488" column="16" lean-forward="false" selection-start-line="488" selection-start-column="16" selection-end-line="488" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/utils/FontUtil.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="35" column="23" lean-forward="false" selection-start-line="35" selection-start-column="23" selection-end-line="35" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/titles/povestka/rus/CriminalPovestkaRusTitle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="238">
-          <caret line="18" column="42" lean-forward="false" selection-start-line="18" selection-start-column="42" selection-end-line="18" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/titles/povestka/rus/CivilPovestkaRusTitle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="10" column="36" lean-forward="false" selection-start-line="10" selection-start-column="36" selection-end-line="10" selection-end-column="36" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/titles/povestka/kaz/CriminalPovestkaKazTitle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="204">
-          <caret line="16" column="42" lean-forward="false" selection-start-line="16" selection-start-column="42" selection-end-line="16" selection-end-column="42" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/titles/povestka/kaz/CivilPovestkaKazTitle.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/titles/single/povestka/kaz/CivilPovestkaKazTitle.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="20" column="62" lean-forward="false" selection-start-line="20" selection-start-column="62" selection-end-line="20" selection-end-column="62" />
@@ -847,18 +755,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/titles/povestka/kaz/AdministrativePovestkaKazTitle.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/titles/single/povestka/kaz/AdministrativePovestkaKazTitle.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="357">
           <caret line="21" column="42" lean-forward="false" selection-start-line="21" selection-start-column="42" selection-end-line="21" selection-end-column="42" />
           <folding>
             <element signature="imports" expanded="false" />
-            <element signature="e#971#972#0" expanded="false" />
+            <element signature="e#985#986#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/titles/notice/AbstractNoticeKazTitle.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/titles/single/notice/AbstractNoticeKazTitle.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="34">
           <caret line="2" column="0" lean-forward="false" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
@@ -868,7 +776,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/titles/notice/AbstractNoticeRusTitle.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/titles/single/notice/AbstractNoticeRusTitle.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="136">
           <caret line="8" column="36" lean-forward="false" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
@@ -886,7 +794,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/titles/povestka/AbstractPovestkaKazTitle.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/titles/single/povestka/AbstractPovestkaKazTitle.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="6" column="40" lean-forward="false" selection-start-line="6" selection-start-column="40" selection-end-line="6" selection-end-column="40" />
@@ -894,7 +802,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/titles/povestka/AbstractPovestkaRusTitle.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/titles/single/povestka/AbstractPovestkaRusTitle.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="102">
           <caret line="8" column="32" lean-forward="false" selection-start-line="8" selection-start-column="32" selection-end-line="8" selection-end-column="32" />
@@ -902,7 +810,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/titles/povestka/lang/AbstractLangTemplate.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/titles/single/povestka/lang/AbstractLangTemplate.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="476">
           <caret line="39" column="31" lean-forward="false" selection-start-line="39" selection-start-column="31" selection-end-line="39" selection-end-column="31" />
@@ -910,7 +818,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/titles/povestka/lang/RusLangTemplate.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/titles/single/povestka/lang/RusLangTemplate.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="986">
           <caret line="99" column="0" lean-forward="false" selection-start-line="99" selection-start-column="0" selection-end-line="112" selection-end-column="5" />
@@ -918,7 +826,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/titles/povestka/lang/KazLangTemplate.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/titles/single/povestka/lang/KazLangTemplate.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="137">
           <caret line="23" column="0" lean-forward="false" selection-start-line="23" selection-start-column="0" selection-end-line="32" selection-end-column="0" />
@@ -926,27 +834,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/titles/notice/AbstractNoticeKazTitle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="119">
-          <caret line="8" column="36" lean-forward="false" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/titles/notice/AbstractNoticeRusTitle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="136">
-          <caret line="9" column="36" lean-forward="false" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/titles/povestka/AbstractPovestkaTitle.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/titles/single/povestka/AbstractPovestkaTitle.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-2614">
           <caret line="17" column="25" lean-forward="true" selection-start-line="17" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
@@ -954,239 +842,350 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/titles/povestka/rus/AdministrativePovestkaRusTitle.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/titles/single/povestka/rus/AdministrativePovestkaRusTitle.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="238">
           <caret line="20" column="28" lean-forward="false" selection-start-line="20" selection-start-column="19" selection-end-line="20" selection-end-column="28" />
           <folding>
-            <marker date="1522316300922" expanded="true" signature="985:994" ph="{...}" />
+            <marker date="1522648563208" expanded="true" signature="999:1008" ph="{...}" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/titles/notice/kaz/CriminalRefusalNoticeKazTitle.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/titles/single/notice/kaz/CivilControlNoticeKazTitle.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-379">
-          <caret line="13" column="0" lean-forward="true" selection-start-line="13" selection-start-column="0" selection-end-line="13" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3549#3550#0" expanded="true" />
-            <element signature="e#3597#3598#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="1275">
+          <caret line="83" column="1" lean-forward="true" selection-start-line="83" selection-start-column="1" selection-end-line="83" selection-end-column="1" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/titles/notice/lang/AbstractLangTemplate.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/titles/single/notice/rus/CivilControlNoticeRusTitle.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="18" column="0" lean-forward="false" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+        <state relative-caret-position="17">
+          <caret line="51" column="4" lean-forward="false" selection-start-line="51" selection-start-column="4" selection-end-line="51" selection-end-column="4" />
           <folding>
-            <element signature="e#334#335#0" expanded="true" />
-            <element signature="e#368#369#0" expanded="true" />
-            <element signature="e#405#406#0" expanded="true" />
-            <element signature="e#436#437#0" expanded="true" />
-            <element signature="e#471#472#0" expanded="true" />
-            <element signature="e#502#503#0" expanded="true" />
-            <element signature="e#536#537#0" expanded="true" />
-            <element signature="e#566#567#0" expanded="true" />
-            <element signature="e#599#600#0" expanded="true" />
-            <element signature="e#627#628#0" expanded="true" />
-            <element signature="e#659#660#0" expanded="true" />
-            <element signature="e#687#688#0" expanded="true" />
-            <element signature="e#719#720#0" expanded="true" />
-            <element signature="e#747#748#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#5676#5677#0" expanded="false" />
+            <element signature="e#5715#5716#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/titles/notice/lang/KazLangTemplate.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/titles/single/notice/lang/KazLangTemplate.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="40" column="0" lean-forward="true" selection-start-line="40" selection-start-column="0" selection-end-line="40" selection-end-column="0" />
+        <state relative-caret-position="51">
+          <caret line="3" column="13" lean-forward="false" selection-start-line="3" selection-start-column="13" selection-end-line="3" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/titles/single/notice/lang/RusLangTemplate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/titles/single/notice/lang/AbstractLangTemplate.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="230">
+          <caret line="30" column="4" lean-forward="false" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="4" />
           <folding>
-            <element signature="e#140#141#0" expanded="false" />
-            <element signature="e#180#181#0" expanded="false" />
-            <element signature="e#229#230#0" expanded="false" />
-            <element signature="e#269#270#0" expanded="false" />
+            <element signature="e#341#342#0" expanded="false" />
+            <element signature="e#375#376#0" expanded="false" />
+            <element signature="e#410#411#0" expanded="false" />
+            <element signature="e#441#442#0" expanded="false" />
+            <element signature="e#476#477#0" expanded="false" />
+            <element signature="e#507#508#0" expanded="false" />
+            <element signature="e#541#542#0" expanded="false" />
+            <element signature="e#571#572#0" expanded="false" />
+            <element signature="e#603#604#0" expanded="false" />
+            <element signature="e#631#632#0" expanded="false" />
+            <element signature="e#663#664#0" expanded="false" />
+            <element signature="e#691#692#0" expanded="false" />
+            <element signature="e#723#724#0" expanded="false" />
+            <element signature="e#751#752#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/titles/notice/lang/RusLangTemplate.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/titles/single/notice/kaz/CriminalPreviouslyNoticeKazTitle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="318">
+          <caret line="51" column="4" lean-forward="false" selection-start-line="51" selection-start-column="4" selection-end-line="51" selection-end-column="4" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#2840#2841#0" expanded="false" />
+            <element signature="e#2879#2880#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/titles/single/notice/kaz/CriminalRefusalNoticeKazTitle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="131">
+          <caret line="23" column="8" lean-forward="false" selection-start-line="23" selection-start-column="8" selection-end-line="23" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#3067#3068#0" expanded="false" />
+            <element signature="e#3115#3116#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/titles/single/notice/kaz/CriminalFilingCaseNoticeKazTitle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="386">
+          <caret line="36" column="5" lean-forward="true" selection-start-line="36" selection-start-column="5" selection-end-line="36" selection-end-column="5" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#1983#1984#0" expanded="false" />
+            <element signature="e#2031#2032#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/titles/single/notice/AbstractNoticeKazTitle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="8" column="36" lean-forward="false" selection-start-line="8" selection-start-column="36" selection-end-line="8" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/titles/single/notice/kaz/CriminalControlNoticeKazTitle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="31" column="0" lean-forward="false" selection-start-line="31" selection-start-column="0" selection-end-line="31" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#2902#2903#0" expanded="false" />
+            <element signature="e#2941#2942#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/titles/single/notice/kaz/CivilPreviouslyNoticeKazTitle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="561">
+          <caret line="39" column="4" lean-forward="false" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/titles/single/notice/rus/CriminalPreviouslyNoticeRusTitle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-132">
+          <caret line="22" column="8" lean-forward="false" selection-start-line="22" selection-start-column="8" selection-end-line="22" selection-end-column="8" />
+          <folding>
+            <element signature="imports" expanded="false" />
+            <element signature="e#2785#2786#0" expanded="false" />
+            <element signature="e#2824#2825#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/titles/single/notice/rus/CriminalControlNoticeRusTitle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-81">
+          <caret line="14" column="14" lean-forward="false" selection-start-line="14" selection-start-column="8" selection-end-line="14" selection-end-column="14" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/titles/single/notice/AbstractNoticeRusTitle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="119">
+          <caret line="9" column="36" lean-forward="false" selection-start-line="9" selection-start-column="36" selection-end-line="9" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/titles/single/notice/AbstractNoticeTitle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="152" column="34" lean-forward="false" selection-start-line="152" selection-start-column="8" selection-end-line="152" selection-end-column="34" />
+          <folding>
+            <element signature="imports" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/titles/single/notice/rus/CriminalFilingCaseNoticeRusTitle.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="153">
-          <caret line="9" column="4" lean-forward="false" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="4" />
-          <folding>
-            <element signature="e#139#140#0" expanded="false" />
-            <element signature="e#182#183#0" expanded="false" />
-            <element signature="e#231#232#0" expanded="false" />
-            <element signature="e#274#275#0" expanded="false" />
-            <element signature="e#323#324#0" expanded="false" />
-            <element signature="e#361#362#0" expanded="false" />
-            <element signature="e#409#410#0" expanded="false" />
-            <element signature="e#456#457#0" expanded="false" />
-          </folding>
+          <caret line="15" column="0" lean-forward="false" selection-start-line="15" selection-start-column="0" selection-end-line="19" selection-end-column="42" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/titles/notice/kaz/CivilControlNoticeKazTitle.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/titles/Title.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-892">
-          <caret line="13" column="3" lean-forward="false" selection-start-line="13" selection-start-column="3" selection-end-line="13" selection-end-column="3" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#6178#6179#0" expanded="false" />
-            <element signature="e#6217#6218#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="68">
+          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/titles/notice/kaz/CivilPreviouslyNoticeKazTitle.java">
+    <entry file="jar://$MAVEN_REPOSITORY$/com/itextpdf/itextpdf/5.5.13/itextpdf-5.5.13.jar!/com/itextpdf/text/Rectangle.class">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-705">
-          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#4449#4450#0" expanded="false" />
-            <element signature="e#4488#4489#0" expanded="false" />
-          </folding>
+        <state relative-caret-position="3077">
+          <caret line="236" column="36" lean-forward="false" selection-start-line="236" selection-start-column="30" selection-end-line="236" selection-end-column="36" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/titles/notice/kaz/CriminalPreviouslyNoticeKazTitle.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/titles/common/AbstractPostTitle.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="901">
-          <caret line="53" column="38" lean-forward="true" selection-start-line="53" selection-start-column="38" selection-end-line="53" selection-end-column="38" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3212#3213#0" expanded="true" />
-            <element signature="e#3251#3252#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-340">
+          <caret line="11" column="22" lean-forward="false" selection-start-line="11" selection-start-column="22" selection-end-line="11" selection-end-column="22" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/titles/AbstractTitle.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1938">
-          <caret line="150" column="5" lean-forward="false" selection-start-line="150" selection-start-column="5" selection-end-line="150" selection-end-column="5" />
+        <state relative-caret-position="85">
+          <caret line="16" column="0" lean-forward="false" selection-start-line="16" selection-start-column="0" selection-end-line="17" selection-end-column="47" />
           <folding>
-            <element signature="method#createTitle#0;class#AbstractTitle#0" expanded="false" />
             <element signature="method#createBarcodeInCode#0;class#AbstractTitle#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/titles/notice/rus/CriminalRefusalNoticeRusTitle.java">
+    <entry file="file://$PROJECT_DIR$/src/main/resources/images/LadyJustice.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/images/logo_hybrid.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/images/logo_sud.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/images/hybrid_promo.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/images/f119_templateJpg.jpg">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/images/generate.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/images/f119_template.png">
+      <provider selected="true" editor-type-id="images">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../gep_core/src/main/java/kazpost/gep/core/services/generators/titles/common/VSTitle.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="981">
-          <caret line="58" column="0" lean-forward="true" selection-start-line="13" selection-start-column="3" selection-end-line="58" selection-end-column="0" />
+        <state relative-caret-position="-240">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../gep_core/src/main/java/kazpost/gep/core/services/generators/titles/common/post_kz/MailKzTitle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="391">
+          <caret line="25" column="4" lean-forward="false" selection-start-line="25" selection-start-column="4" selection-end-line="25" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/titles/common/LegalPostTitle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="85">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../gep_core/src/main/java/kazpost/gep/core/services/generators/titles/common/GPTitle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/../gep_core/src/main/java/kazpost/gep/core/services/generators/titles/common/NurOtanTitle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="51">
+          <caret line="12" column="0" lean-forward="false" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/titles/common/DVDAstanaPostTitle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="11" column="13" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/titles/single/notice/rus/CivilPreviouslyNoticeRusTitle.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="66" column="21" lean-forward="false" selection-start-line="66" selection-start-column="8" selection-end-line="66" selection-end-column="21" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3546#3547#0" expanded="true" />
-            <element signature="e#3594#3595#0" expanded="true" />
+            <element signature="e#4252#4253#0" expanded="true" />
+            <element signature="e#4291#4292#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/titles/notice/rus/CivilPreviouslyNoticeRusTitle.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/titles/single/notice/rus/CriminalRefusalNoticeRusTitle.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="340">
-          <caret line="41" column="0" lean-forward="true" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#4929#4930#0" expanded="true" />
-            <element signature="e#4968#4969#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="544">
+          <caret line="38" column="25" lean-forward="false" selection-start-line="38" selection-start-column="25" selection-end-line="38" selection-end-column="25" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/titles/notice/rus/CivilControlNoticeRusTitle.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/f119/UsualF119Generator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="468">
-          <caret line="31" column="27" lean-forward="true" selection-start-line="31" selection-start-column="27" selection-end-line="31" selection-end-column="27" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#6510#6511#0" expanded="true" />
-            <element signature="e#6549#6550#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="85">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/titles/notice/AbstractNoticeTitle.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/f119/F119Generator.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="131">
-          <caret line="90" column="47" lean-forward="false" selection-start-line="90" selection-start-column="47" selection-end-line="90" selection-end-column="47" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
+        <state relative-caret-position="85">
+          <caret line="7" column="17" lean-forward="false" selection-start-line="7" selection-start-column="17" selection-end-line="7" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/titles/notice/rus/CriminalPreviouslyNoticeRusTitle.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/f119/F119GenerateOnePage.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="57" column="0" lean-forward="true" selection-start-line="53" selection-start-column="3" selection-end-line="57" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3166#3167#0" expanded="true" />
-            <element signature="e#3205#3206#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/titles/notice/rus/CriminalFilingCaseNoticeRusTitle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="187">
-          <caret line="11" column="45" lean-forward="false" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="45" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2518#2519#0" expanded="true" />
-            <element signature="e#2557#2558#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/titles/notice/rus/CriminalControlNoticeRusTitle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="386">
-          <caret line="63" column="0" lean-forward="true" selection-start-line="13" selection-start-column="3" selection-end-line="63" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3313#3314#0" expanded="true" />
-            <element signature="e#3352#3353#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/titles/notice/kaz/CriminalFilingCaseNoticeKazTitle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="301">
-          <caret line="50" column="0" lean-forward="true" selection-start-line="46" selection-start-column="7" selection-end-line="50" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#2535#2536#0" expanded="true" />
-            <element signature="e#2574#2575#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-186">
+          <caret line="94" column="75" lean-forward="false" selection-start-line="94" selection-start-column="68" selection-end-line="94" selection-end-column="75" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/Main.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="170">
-          <caret line="15" column="43" lean-forward="false" selection-start-line="15" selection-start-column="43" selection-end-line="15" selection-end-column="43" />
+        <state relative-caret-position="17">
+          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/titles/notice/kaz/CriminalControlNoticeKazTitle.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="16" column="44" lean-forward="false" selection-start-line="16" selection-start-column="44" selection-end-line="16" selection-end-column="44" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#3276#3277#0" expanded="true" />
-            <element signature="e#3315#3316#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>

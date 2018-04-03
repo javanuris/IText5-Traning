@@ -76,10 +76,10 @@ public class F119GenerateOnePage {
             e.printStackTrace();
         }
 
-        Map<String,ByteArrayOutputStream> map = new HashMap<>();
-      for (int i = 0 ; i < 50; i++){
-          map.put(i+"test_f119.pdf",outputFile);
-      }
+        Map<String, ByteArrayOutputStream> map = new HashMap<>();
+        for (int i = 0; i < 50; i++) {
+            map.put(i + "test_f119.pdf", outputFile);
+        }
 
 
         fileStoreService.saveFile(map);
@@ -112,7 +112,6 @@ public class F119GenerateOnePage {
                 Paragraph paragraph = new Paragraph(everyIndexNumber[i], FontUtil.courier(12));
                 ColumnText.showTextAligned(template, Element.ALIGN_UNDEFINED, paragraph, 292 + offset, 306, 0);
                 offset += 10;
-
             }
         }
 
