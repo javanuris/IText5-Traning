@@ -42,7 +42,7 @@ public class F119GenerateOnePage {
             Image image = createF119Image();
             int counter = 0;
             for (Form103 form103 : form103List) {
-                Image f119Image = null;
+                Image f119Image;
 
                 if (counter >= 1) {
                     if (counter <= form103List.size() - 2) {
@@ -57,7 +57,6 @@ public class F119GenerateOnePage {
                         f119Image.setAbsolutePosition(-50f, -57f);
                     }
 
-                    document.add(f119Image);
                     if (counter % 2 == 0) {
                         document.newPage();
                     }
@@ -80,7 +79,6 @@ public class F119GenerateOnePage {
         for (int i = 0; i < 50; i++) {
             map.put(i + "test_f119.pdf", outputFile);
         }
-
 
         fileStoreService.saveFile(map);
         return null;

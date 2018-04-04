@@ -39,6 +39,12 @@ public abstract class AbstractTitle implements Title {
         return null;
     }
 
+    public void createTitle(PdfWriter writer, Form103 form103){
+        createHeader(writer, form103);
+        createBody(writer, form103);
+        createFooter(writer, form103);
+    }
+
     @Override
     public void createHeader(PdfWriter writer, Form103 form103) {
         createIdPackage(writer, String.valueOf(form103.getIdPackage()));
