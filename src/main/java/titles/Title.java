@@ -9,6 +9,8 @@ public interface Title {
 
     ByteArrayOutputStream createTitle(Form103 form103);
 
+    void createTitle(PdfWriter writer, Form103 form103);
+
     void createHeader(PdfWriter writer , Form103 form103);
 
     void createBody(PdfWriter writer, Form103 form103);
